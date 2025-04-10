@@ -1,0 +1,297 @@
+<form
+  class="form-login needs-validation"
+  autocomplete="off"
+  [formGroup]="formLogin"
+  (ngSubmit)="onSubmit()"
+>
+  <div class="form-group form-group-custom">
+    <label class="m-0 mb-1">Número de documento del trabajador *</label>
+    <input
+      type="number"
+      formControlName="documentTrabajador"
+      class="form-control sinFlechas"
+      placeholder="* Número de documento trabajador"
+      placement="right"
+      min="1"
+      [class.is-invalid]="getDocumentTrabajador"
+    />
+    <div
+      *ngIf="getDocumentTrabajador"
+      class="invalid-feedback animate__animated animate__fadeIn animate__fast"
+    >
+      <span class="badge badge-pill badge-danger d-block mt-2 text-left"
+        >NÚMERO DE DOCUMENTO DEL TRABAJADOR ES REQUERIDO</span
+      >
+    </div>
+    <div
+      *ngIf="f.documentTrabajador.touched && f.documentTrabajador.errors?.min"
+      class="invalid-feedback animate__animated animate__fadeIn animate__fast"
+    >
+      <span class="badge badge-pill badge-danger d-block mt-2 text-left">
+        DEBES INGRESAR MÍNIMO 6 DÍGITOS</span
+      >
+    </div>
+    <div
+      *ngIf="f.documentTrabajador.touched && f.documentTrabajador.errors?.max"
+      class="invalid-feedback animate__animated animate__fadeIn animate__fast"
+    >
+      <span class="badge badge-pill badge-danger d-block mt-2 text-left">
+        DEBES INGRESAR MÁXIMO 15 DÍGITOS</span
+      >
+    </div>
+    <div
+      *ngIf="f.documentTrabajador.touched && f.documentTrabajador.errors?.pattern"
+      class="invalid-feedback animate__animated animate__fadeIn animate__fast"
+    >
+      <span class="badge badge-pill badge-danger d-block mt-2 text-left"
+        >DEBES INGRESAR DÍGITOS POSITIVOS</span
+      >
+    </div>
+  </div>
+
+  <div class="form-group form-group-custom">
+    <label class="m-0 mb-1">Número de documento persona a cargo *</label>
+    <input
+      type="number"
+      formControlName="documentPersonaCargo"
+      class="form-control sinFlechas"
+      placeholder="* Número de documento persona cargo"
+      placement="right"
+      min="1"
+      [class.is-invalid]="getDocumentPersonaCargo"
+    />
+    <div
+      *ngIf="getDocumentPersonaCargo"
+      class="invalid-feedback animate__animated animate__fadeIn animate__fast"
+    >
+      <span class="badge badge-pill badge-danger d-block mt-2 text-left"
+        >NÚMERO DE DOCUMENTO DE LA PERSONA CARGO ES REQUERIDO</span
+      >
+    </div>
+    <div
+      *ngIf="f.documentPersonaCargo.touched && f.documentPersonaCargo.errors?.min"
+      class="invalid-feedback animate__animated animate__fadeIn animate__fast"
+    >
+      <span class="badge badge-pill badge-danger d-block mt-2 text-left">
+        DEBES INGRESAR MÍNIMO 6 DÍGITOS</span
+      >
+    </div>
+    <div
+      *ngIf="f.documentPersonaCargo.touched && f.documentPersonaCargo.errors?.max"
+      class="invalid-feedback animate__animated animate__fadeIn animate__fast"
+    >
+      <span class="badge badge-pill badge-danger d-block mt-2 text-left">
+        DEBES INGRESAR MÁXIMO 15 DÍGITOS</span
+      >
+    </div>
+    <div
+      *ngIf="f.documentPersonaCargo.touched && f.documentPersonaCargo.errors?.pattern"
+      class="invalid-feedback animate__animated animate__fadeIn animate__fast"
+    >
+      <span class="badge badge-pill badge-danger d-block mt-2 text-left"
+        >DEBES INGRESAR DÍGITOS POSITIVOS</span
+      >
+    </div>
+  </div>
+  
+  <div class="form-group form-group-custom">
+    <label class="m-0 mb-1"># Radicado *</label>
+    <input
+      type="text"
+      formControlName="radicado"
+      class="form-control"
+      placeholder="* Radicado"
+      placement="right"
+      min="1"
+      [class.is-invalid]="getRadicado"
+    />
+    <div
+      *ngIf="getRadicado"
+      class="invalid-feedback animate__animated animate__fadeIn animate__fast"
+    >
+    <span class="badge badge-pill badge-danger d-block mt-2 text-left"
+        ># RADICADO ES REQUERIDO</span
+      >
+      <!-- <span
+        *ngIf="f.radicado.errors.required"
+        class="badge badge-pill badge-danger d-block mt-2 text-left"
+      >
+        RADICADO ES REQUERIDO</span
+      > -->
+    </div>
+    <div
+      *ngIf="f.radicado.touched && f.radicado.errors?.minlength"
+      class="invalid-feedback animate__animated animate__fadeIn animate__fast"
+    >
+      <span class="badge badge-pill badge-danger d-block mt-2 text-left">
+        DEBES INGRESAR MÍNIMO 3 CARACTERES</span
+      >
+    </div>
+  </div>
+  <div class="form-group form-group-custom">
+    <label class="m-0 mb-1"
+      >* Los campos que tienen asterisco con obligatorios.</label
+    >
+  </div>
+
+  <div class="form-group m-0">
+    <button
+      [disabled]="utilitiesService.loading"
+      class="btn btn-credits btn-signin btn-block mt-1 mb-1"
+    >
+      <span
+        *ngIf="utilitiesService.loading"
+        class="spinner-border spinner-border-sm mr-1"
+      ></span>
+      Ingresar
+    </button>
+  </div>
+</form>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="modalPago"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modalPagoTitle"
+  aria-hidden="true"
+  data-backdrop="static"
+  data-keyboard="false"
+>
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalPagoTitle">Información de Pago</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group form-group-custom">
+            <label>Categoría</label>
+            <input type="text" class="form-control" [value]="infoPago.categoria" readonly />
+          </div>
+          <!-- <div class="form-group">
+            <label>Celular</label>
+            <input type="text" class="form-control" [value]="infoPago.celular" readonly />
+          </div>
+          <div class="form-group">
+            <label>Dirección</label>
+            <input type="text" class="form-control" [value]="infoPago.direccion" readonly />
+          </div> -->
+          <div class="form-group form-group-custom">
+            <label>Email</label>
+            <input type="email" class="form-control" [value]="infoPago.email" (input)="infoPago.email = $event.target.value"/>
+          </div>
+          <div class="form-group form-group-custom">
+            <label>Nombre del Trabajador</label>
+            <input type="text" class="form-control" [value]="infoPago.nombreTrabajador" readonly />
+          </div>
+          <div class="form-group form-group-custom">
+            <label>Valor Copago</label>
+            <input type="text" class="form-control" [value]="infoPago.valorCopago | currency" readonly />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-credits btn-signin btn-block mt-1 mb-1" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-credits btn-signin btn-block mt-1 mb-1" (click)="redirigirPago()">Pagar</button>
+        <!-- <button type="button" class="btn btn-primary" (click)="redirigirPago()">Pagar</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div exitoso
+  class="modal fade"
+  id="modalPagoExitoso"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modalPagoTitle"
+  aria-hidden="true"
+  data-backdrop="static"
+  data-keyboard="false"
+>
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalPagoTitle">Información de Pago Exitoso</h5>
+        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"> -->
+          <!-- <span aria-hidden="true">&times;</span>
+        </button> -->
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label>Pago exitoso!!!</label>
+          </div>
+         
+         
+          <div class="form-group form-group-custom">
+            <label>Documento</label>
+            <input type="text" class="form-control" [value]="infoRespuestaProceso.documento" readonly />
+          </div>
+          <div class="form-group form-group-custom">
+            <label>Email</label>
+            <input type="text" class="form-control" [value]="infoRespuestaProceso.email" readonly />
+          </div>
+          
+          <div class="form-group form-group-custom">
+            <label>Fecha Creación</label>
+            <input type="text" class="form-control" [value]="infoRespuestaProceso.fechaCreacion" readonly />
+          </div>
+          <div class="form-group form-group-custom">
+            <label>Fecha Modificación</label>
+            <input type="text" class="form-control" [value]="infoRespuestaProceso.fechaModificacion" readonly />
+          </div>
+          <div class="form-group form-group-custom">
+            <label>Identificador Producto</label>
+            <input type="text" class="form-control" [value]="infoRespuestaProceso.identificadorProducto" readonly />
+          </div>
+          <div class="form-group form-group-custom">
+            <label>Medio Pago</label>
+            <input type="text" class="form-control" [value]="infoRespuestaProceso.medioPago" readonly />
+          </div>
+          <div class="form-group form-group-custom">
+            <label>Nombre y Apellido</label>
+            <input type="text" class="form-control" [value]="infoRespuestaProceso.nombreApellido" readonly />
+          </div>
+          <div class="form-group form-group-custom">
+            <label>Payment Order ID</label>
+            <input type="text" class="form-control" [value]="infoRespuestaProceso.paymentOrderId" readonly />
+          </div>
+          <div class="form-group form-group-custom">
+            <label>Payment Order Status ID</label>
+            <input type="text" class="form-control" [value]="infoRespuestaProceso.paymentOrderStatusId" readonly />
+          </div>
+          <div class="form-group form-group-custom">
+            <label>Registro ID</label>
+            <input type="text" class="form-control" [value]="infoRespuestaProceso.registroId" readonly />
+          </div>
+          <div class="form-group form-group-custom">
+            <label>Trans Status ID</label>
+            <input type="text" class="form-control" [value]="infoRespuestaProceso.transStatusId" readonly />
+          </div>
+          <div class="form-group form-group-custom">
+            <label>Trans UUID</label>
+            <input type="text" class="form-control" [value]="infoRespuestaProceso.transUuid" readonly />
+          </div>
+          <div class="form-group form-group-custom">
+            <label>Valor Pago</label>
+            <input type="text" class="form-control" [value]="infoRespuestaProceso.valorPago" readonly />
+          </div>
+          <div class="form-group">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="redirigirLogin()">Aceptar</button>
+            </div>
+          </form>
+    </div>
+  </div>
+</div>
+
+
+
+

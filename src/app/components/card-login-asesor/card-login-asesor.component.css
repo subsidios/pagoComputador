@@ -1,0 +1,9 @@
+input.sinFlechas::-webkit-outer-spin-button,
+input.sinFlechas::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+div.aviso {
+  font-family: Ubuntu, Poppins;
+  font-size: 10px;
+}

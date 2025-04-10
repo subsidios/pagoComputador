@@ -1,0 +1,201 @@
+section.fondo {
+  background: url("/assets/img/login_background.png");
+  background-size: cover;
+}
+
+.card {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.card-title-login {
+  size: 28.1px;
+  color: #03a9f4;
+  line-height: 29px;
+  font-weight: bold;
+}
+
+.btn-forgot-password {
+  color: #ff2d27;
+  border-radius: 25px;
+  padding: 5px 20px;
+  outline: 0px;
+  font-family: Ubuntu, Poppins;
+  font-size: 14px;
+  line-height: 29px;
+  text-decoration: underline;
+}
+
+.policies {
+  font-size: 7pt;
+  font-weight: 700;
+  line-height: 8pt;
+  color: #212529;
+}
+p.policies a {
+  color: #212529;
+  text-decoration: underline;
+}
+
+div.margenModal {
+  margin: 132px 0;
+}
+
+.forgot {
+  font-weight: bold;
+  font-size: 25px;
+  color: #03a9f4;
+}
+
+.paragraph {
+  position: relative;
+  font-weight: 700;
+  color: #9a9a9a !important;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 16.8px;
+}
+
+.paragraph::before {
+  content: "";
+  background-color: #03a9f4;
+  position: absolute;
+  width: 8px;
+  height: 100%;
+  left: 0;
+  border-radius: 5px;
+}
+
+.card-title-message {
+  color: #03a9f4;
+  size: 32px;
+  font-weight: bold;
+  line-height: 32px;
+}
+.card-title-message-hr{
+  background-color: #03a9f4;
+  content: "";
+  width: 90%;
+  height: 8px;
+  border-radius: 5px;
+  float: left;
+  text-align: left; 
+  margin-left: 0;
+  margin-top: 0;
+} 
+
+/* .card-title-message::before {
+  background-color: #03a9f4;
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 8px;
+  bottom: 360px;
+  border-radius: 5px;
+} */
+
+@media only screen and (max-width: 567px) {
+  .card-title-message::before {
+    bottom: 280px;
+  }
+}
+.card-text {
+  size: 17px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+li {
+  margin-top: 1rem;
+  list-style-image: url("/assets/img/check_login.png");
+}
+
+/* ------------------------MODAL QUESTIONS---------------- */
+
+button.btn-form-questions {
+  display: none;
+}
+
+div.modal-form-questions {
+  font-family: Ubuntu, Poppins;
+  font-size: 10px;
+}
+
+div.modal-form-questions div.modal-content {
+  border-radius: 7px;
+  width: 1002px;
+}
+
+div.modal-form-questions div.login-header {
+  color: #03a9f4;
+  font-size: 20px;
+  line-height: 21px;
+  font-weight: 700;
+  border-bottom: none;
+}
+
+div.modal-form-questions
+  div.modal-body
+  div.login-content
+  form.form-login
+  label {
+  font-size: 10px;
+  line-height: 11px;
+  color: #666666;
+}
+
+div.modal-form-questions
+  div.modal-body
+  div.login-content
+  form.form-login
+  input {
+  padding: 5px 20px !important;
+  height: auto !important;
+  font-family: Ubuntu;
+  font-size: 16px !important;
+  border-radius: 50px;
+  display: block;
+  width: 100%;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-clip: padding-box;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  background-color: #eee;
+}
+
+div.modal-form-questions
+  div.modal-body
+  div.login-content
+  form.form-login
+  input[type="checkbox"] {
+  width: auto;
+}
+
+div.modal-form-questions div.modal-body div.login-content div button.btn-next {
+  background-color: #03a9f4;
+  border-color: #03a9f4;
+  color: #fff;
+  border-radius: 25px;
+  padding: 5px 20px;
+  outline: 0px;
+  font-family: Ubuntu, Poppins;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+div.modal-form-questions
+  div.modal-body
+  div.login-content
+  div
+  button.btn-next:hover {
+  background-color: #fff;
+  color: #03a9f4;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+  margin-top: -7px !important;
+  margin-bottom: 16px !important;
+}

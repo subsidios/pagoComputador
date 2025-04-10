@@ -1,0 +1,47 @@
+<div
+  style="text-align: center"
+  class="wrapper"
+  (window:resize)="onResize($event)"
+>
+  <div>
+    <div class="container">
+      <div class="text1" *ngIf="errors.length > 0">
+        <h4 *ngIf="errors.length > 0" class="mt-4">Cámara desactivada:</h4>
+        <ul *ngFor="let error of errors">
+          <li>
+            Se debe dar permisos al navegador para utilizar la cámara y poder
+            continuar
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <webcam
+      [height]="height"
+      [width]="width"
+      [trigger]="triggerObservable"
+      (imageCapture)="handleImage($event)"
+      *ngIf="showWebcam"
+      [allowCameraSwitch]="allowCameraSwitch"
+      [switchCamera]="nextWebcamObservable"
+      [videoOptions]="videoOptions"
+      (cameraSwitched)="cameraWasSwitched($event)"
+      (initError)="handleInitError($event)"
+    ></webcam>
+    <br />
+    <button [disabled]="!this.permiso"
+      class="btn-credits btn mt-1 mb-1 validar"
+      (click)="triggerSnapshot()"
+    >
+      <h4 class="m-0">Validar</h4>
+    </button>
+    <div *ngIf="!this.permiso && !utilitiesService.loading"  class="animated fadeIn fast">
+      <span class="badge badge-pill badge-danger d-block" style="font-size: 11px; line-height: 120%">
+           DEBES SER MAYOR DE EDAD PARA REALIZAR ESTA ACCIÓN.
+      </span>
+  </div>
+    <!-- <div class="actionBtn" (click)="showNextWebcam(true)" title="Switch Camera">
+      🔁
+    </div> -->
+  </div>
+</div>

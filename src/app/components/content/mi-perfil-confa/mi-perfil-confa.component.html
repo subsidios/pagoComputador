@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="col-md-2 ml-5 mr-5 p-0">
+    <button
+      class="btn botonBack text-center m-2"
+      (click)="goHome()"
+      routerLinkActive="router-link-active"
+      type="button"
+    >
+      <i class="fas fa-arrow-left"></i> Regresar
+    </button>
+  </div>
+
+  <div id="miDiv" class="iframe-container">
+    <iframe
+      id="mi-iframe"
+      [src]="this.rutaMiPerfil | safe"
+      frameborder="0"
+      seamless="seamless"
+      sandbox
+    >
+    </iframe>
+  </div>
+</div>
+
+<app-modal-content></app-modal-content>

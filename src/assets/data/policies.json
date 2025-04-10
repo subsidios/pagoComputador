@@ -1,0 +1,54 @@
+{
+  "imagePolicies": "assets/img/politicaDatos.png",
+  "informationalMessage": "Tómate un momento para leer nuestra",
+  "imageConfa": "assets/img/logo_reverse.png",
+  "tratamientoDeDatos": {
+    "title": "Autorización de tratamiento de datos y de Habeas Data",
+    "subtitle": "Para leer nuestra politica completa",
+    "titleBody": "Política de Habeas Data:",
+    "paragraphs": [
+      { "paragraph1": "Autorización de tratamiento de datos:" },
+      {
+        "paragraph": "Los datos personales almacenados y recolectados en la base de datos de Confa, son y serán utilizados en el desarrollo de las funciones legales y estatutarias. Te recomendamos leerlos y aceptarlos al final del texto."
+      },
+      {
+        "paragraph": "Autorizo de manera previa, expresa e inequívoca a la Caja de Compensación Familiar de Caldas–Confa, para que trate mis datos personales y/o sensibles que llegase a recolectar. De igual manera autorizo de manera previa,  expresa e inequívoca para que se traten los datos personales y/o sensibles del menor o de la persona sobre el cual actúo en calidad de representante legal, para que sobre esta información proceda a procesarla, recolectarla, almacenarla, usarla, circularla, suprimirla, compartirla, actualizarla, transmitirla y transferirla de acuerdo a las finalidades incorporadas en la Autorización de Tratamiento de la Información publicada en www.confa.co, con el fin de hacer posible la prestación de los servicios propios, reportes a autoridades de vigilancia y control, para uso de fines administrativo, comercial, de publicidad y contacto frente a los titulares de los mismos."
+      },
+      {
+        "paragraph": "Al registrar mi huella dactilar, mi rostro (reconocimiento facial), torrente sanguíneo (palma de la mano) o cualquier otro medio que se llegue a requerir para mi enrolamiento, autorizo a la CAJA DE COMPENSACIÓN FAMILIAR DE CALDAS - CONFA para que, de manera previa, expresa e inequívoca dé tratamiento conforme a la Autorización de Tratamiento de Información publicada en www.confa.co donde se indican los canales de atención para el ejercicio de sus derechos."
+      },
+      {
+        "paragraph": "Declaro estar informado sobre la posibilidad de oponerse al tratamiento de datos sensibles, salvo que sea necesario para el objeto de las relaciones que se establecen y que en mi calidad de titular de la información tengo derecho a consultar, conocer, actualizar y rectificar los datos personales, ser informado sobre el uso que se ha dado a los mismos en el momento que los solicite, presentar quejas, revocar la autorización y/o solicitar la supresión de mis datos en los casos en que sea procedente y acceder en forma gratuita a los mismos a través de las líneas de atención 8783111 ext. 2772 o al correo proteccion.datos@confa.co."
+      },
+      { "paragraph": "Autorización para solicitud de crédito:" },
+      {
+        "paragraph": "*Con la firma de la presente solicitud declaramos expresamente que conocemos todas las cláusulas contenidas en esta solicitud, de la misma forma autorizamos a Confa o a quien delegue para reportar, procesar, solicitar o divulgar la información a la Central de información financiera TransUnion o a cualquier otra entidad que maneje o administre bases de datos para los fines anteriormente mencionados, referentes a nuestro compromiso comercial."
+      },
+      {
+        "paragraph": "*También autorizo a Confa para efectuar el primer desembolso del (los) producto (s) mediante abono a mi cuenta corriente o de ahorros, en efectivo o mediante giro de cheque."
+      },
+      {
+        "paragraph": "*Declaro bajo la gravedad de juramento y con conocimiento de las responsabilidades que ello implica, que toda la información relacionada en el presente formulario, en el formulario de SOLICITUD DE CRÉDITO PERSONAL y en la documentación que lo soporta corresponde rigurosamente a la verdad y es susceptible de comprobación."
+      },
+      {
+        "paragraph": "*De común acuerdo entre las partes, los documentos requeridos en el proceso de crédito podrán ser suscritos mediante firma electrónica a través de las herramientas, funcionalidades o soluciones tecnológicas designadas por CONFA para tales efectos. Lo anterior, en consonancia con los preceptos legales que regulan la materia, consagrados en la Ley 527 de 1999, el Decreto 2364 de 2012 y demás disposiciones concordantes."
+      }
+    ]
+  },
+  "condicionesDeUsoDelServicio": {
+    "title": "Condiciones de uso del servicio",
+    "subtitle": "Te presentamos los Términos y Condiciones bajo las cuales Confa realizará la prestación del servicio de pago en linea del subsidio de computadores a través de nuestro Portal Web. Debes aceptarlos para poder continuar.",
+    "paragraphs": [
+      { "paragraph": "Debes estar  activo en la caja." },
+      {
+        "paragraph": "Debes ser categoria A ó B."
+      },
+      {
+        "paragraph": "Debes ser un trabajador dependiente."
+      },
+      {
+        "paragraph": "La empresa para la cual trabajas debe estar al día en pago de aportes."
+      }
+    ]
+  }
+}

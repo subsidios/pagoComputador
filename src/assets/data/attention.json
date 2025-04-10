@@ -1,0 +1,16 @@
+{
+  "puntosAtencion": [
+    {
+      "nombreSede": "Sede la 50",
+      "direccionSede": "(Calle 50-Cra.25)"
+    }
+  ],
+  "lineasAtencion": [
+    {
+      "nombreSede": "Centro de atención",
+      "telefonos": "(606) 8783111",
+      "extensiones": "(Ext. 1117 - 1353)",
+      "correo": "servicio.cliente@confa.co"
+    }
+  ]
+}

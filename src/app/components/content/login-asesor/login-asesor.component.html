@@ -1,0 +1,286 @@
+<app-welcome-asesor></app-welcome-asesor>
+<section class="fondo">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-5 mt-4 mb-4">
+        <div
+          class="card-login card d-flex flex-column align-items-center align-items-stretch mt-4 mb-4"
+          [ngClass]="tamano ? 'margenModal' : 'm-0'"
+        >
+          <div
+            class="collapse show collapseForgotPassword collapseRegister collapseTipoDocumento"
+          >
+            <div class="card-body card-body-login animated fadeIn fast">
+              <h3 class="card-title card-title-login mb-4">
+                Ingresa tu usuario y contraseña para acceder
+              </h3>
+
+              <div class="login-content">
+                <app-card-login-asesor></app-card-login-asesor>
+              </div>
+            </div>
+          </div>
+
+          <div class="collapse collapseForgotPassword">
+            <div class="card-body card-body-login animated fadeIn fast">
+              <div class="card-title card-title-login mb-4 forgot">
+                Reestablece tu contraseña
+              </div>
+              <p class="card-text paragraph mb-4">
+                Para restablecer tu contraseña, ingresa el correo electronico
+                con el que te registraste
+              </p>
+              <div class="login-content margen">
+                <app-card-forgot-password></app-card-forgot-password>
+                <div class="form-group m-0">
+                  <button
+                    class="btn btn-outline-credits btn-block mt-1 mb-1"
+                    data-toggle="collapse"
+                    data-target=".collapseForgotPassword"
+                    aria-expanded="false"
+                    aria-controls="collapseForgotPassword"
+                    (click)="modal()"
+                  >
+                    Volver
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="collapse collapseTipoDocumento py-4">
+            <div class="card-body card-body-login animated fadeIn fast">
+              <div class="card-title card-title-login mb-4 forgot">
+                Ingresa tus datos y comienza la solicitud de tu crédito
+              </div>
+              <div class="login-content margen">
+                <app-card-tipo-documento></app-card-tipo-documento>
+                <div class="form-group m-0">
+                  <button
+                    [hidden]="true"
+                    class="btn btn-credits btn-block mt-1 mb-1"
+                    data-toggle="collapse"
+                    data-target=".collapseTipoDocumento"
+                    aria-expanded="false"
+                    aria-controls="collapseTipoDocumento"
+                    (click)="modal()"
+                  >
+                    Ingresar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-7 d-flex justify-content-center">
+        <div class="m-0 d-flex flex-column justify-content-center">
+          <div class="d-flex flex-column justify-content-center pl-0 pr-0">
+            <h4 class="card-title-message mb-5">
+              Este aplicativo es de uso exclusivo para colaboradores
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--===================================== MODALES =======================================-->
+
+<div
+  class="modal fade modal-popup-login"
+  id="modalPopupLogin"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modalPopupLoginLabel"
+  aria-hidden="true"
+  data-backdrop="static"
+  data-keyboard="false"
+>
+  <div
+    class="modal-dialog modal-dialog-centered justify-content-center"
+    role="document"
+  >
+    <div class="modal-content">
+      <div class="modal-header login-header" id="modalPopupLoginLabel">
+        <div class="col-md-11">
+          <div class="d-flex align-items-center justify-content-center">
+            <p class="m-0 pl-4 pr-2">
+              Ingresa para disfrutar de todos nuestros servicios
+            </p>
+          </div>
+        </div>
+        <button
+          type="button"
+          class="close btn-close-popup-login"
+          data-dismiss="modal"
+          aria-label="Close"
+          (click)="cleanForm()"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body pr-5 pl-5">
+        <div
+          class="collapse show collapseForgotPassword-modal collapseRegister-modal"
+        >
+          <div class="animate__animated animate__fadeIn animate__fast">
+            <div class="login-content">
+              <app-card-login
+                (formLoginEmitter)="processFormLogin($event)"
+              ></app-card-login>
+            </div>
+            <p class="policies m-0 pt-2">
+              Al ingresar estarás aceptando la
+              <a
+                href="javascript:;"
+                data-toggle="modal"
+                data-target="#modalPoliticaTratamientoDatos"
+                >Política de tratamiento de datos</a
+              >
+              y las
+              <a
+                href="javascript:;"
+                data-toggle="modal"
+                data-target="#modalCondicionesUsoServicio"
+                >Condiciones de Uso del Servicio</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="collapse collapseForgotPassword-modal">
+          <div class="animate__animated animate__fadeIn animate__fast">
+            <h3 class="card-title card-title-register">
+              Reestablece tu contraseña
+            </h3>
+            <p class="card-text paragraph">
+              Ingresa tu número de documento para restablecer tu contraseña.
+            </p>
+            <div class="login-content">
+              <app-card-forgot-password
+                (formForgotPasswordEmitter)="processFormForgotPassword($event)"
+              ></app-card-forgot-password>
+              <div class="form-group">
+                <button
+                  class="btn btn-outline-credits btn-block"
+                  data-toggle="collapse"
+                  data-target=".collapseForgotPassword-modal"
+                  aria-expanded="false"
+                  aria-controls="collapseForgotPassword-modal"
+                >
+                  Volver
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="collapse collapseTipoDocumento-modal">
+          <div class="animate__animated animate__fadeIn animate__fast">
+            <h3 class="card-title card-title-register">Validar documento</h3>
+            <p class="card-text paragraph">
+              Ingresa tus datos y comienza la solicitud de tu crédito
+            </p>
+            <div class="login-content">
+              <app-card-tipo-documento></app-card-tipo-documento>
+              <div class="form-group">
+                <button
+                  class="btn btn-outline-credits btn-block"
+                  data-toggle="collapse"
+                  data-target=".collapseTipoDocumento-modal"
+                  aria-expanded="false"
+                  aria-controls="collapseTipoDocumento-modal"
+                >
+                  Volver
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button
+  type="button"
+  class="btn-change-password btn btn-primary"
+  data-toggle="modal"
+  data-target="#modalPopupChangePasswordLabel"
+>
+  Change password
+</button>
+
+<div
+  class="modal fade modal-popup-change-password"
+  id="modalPopupChangePasswordLabel"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modalPopupChangePasswordLabel"
+  aria-hidden="true"
+  data-backdrop="static"
+  data-keyboard="false"
+>
+  <div
+    class="modal-dialog modal-dialog-centered justify-content-center"
+    role="document"
+  >
+    <div class="modal-content">
+      <div class="modal-header login-header" id="modalPopupChangePasswordLabel">
+        <div class="col-md-11">
+          <div class="d-flex align-items-center justify-content-center">
+            <p class="m-0 pl-4 pr-2">Reestablece tu contraseña</p>
+          </div>
+        </div>
+        <button
+          type="button"
+          class="close btn-close-popup-change-password"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body pr-5 pl-5">
+        <div class="animate__animated animate__fadeIn animate__fast">
+          <div class="login-content">
+            <app-card-change-password></app-card-change-password>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button
+  type="button"
+  class="btn-form-register btn btn-primary"
+  data-toggle="modal"
+  data-target="#modalFormRegister"
+>
+  Form Register
+</button>
+
+<div
+  class="modal fade modal-form-register"
+  id="modalFormRegister"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modalPopupLoginLabel"
+  aria-hidden="true"
+  data-backdrop="static"
+  data-keyboard="false"
+>
+  <div
+    class="modal-dialog modal-lg modal-dialog-centered justify-content-center"
+    role="document"
+  >
+    <div class="modal-content">
+      <app-card-register-form
+        [respuesta]="this.respuesta"
+      ></app-card-register-form>
+    </div>
+  </div>
+</div>

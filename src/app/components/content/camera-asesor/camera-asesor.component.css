@@ -1,0 +1,33 @@
+.actionBtn {
+  font-size: 4em;
+  cursor: pointer;
+  margin-left: 100 px;
+}
+.snapshot {
+  text-align: center;
+}
+.snapshot.img {
+  max-width: 800px;
+  max-height: 800px;
+}
+ul.links {
+  padding-bottom: 20px;
+}
+
+.wrapper {
+  display: flex;
+  background: #ffffff;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.validar {
+  padding: 5px 80px;
+}
+
+.text1 {
+  background-color: #03a9f4;
+  color: white;
+  border-radius: 15px;
+}

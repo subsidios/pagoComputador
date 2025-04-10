@@ -1,0 +1,13 @@
+<div *ngIf="utilitiesService.loading">
+  <app-loading></app-loading>
+</div>
+<app-header></app-header>
+<!--<app-onbd></app-onbd>-->
+<div class="page-container">
+
+  <section>
+    <router-outlet (activate)="onActivate($event)"></router-outlet>
+  </section>
+
+  <app-footer></app-footer>
+</div>

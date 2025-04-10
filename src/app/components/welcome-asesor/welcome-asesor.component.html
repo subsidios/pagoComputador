@@ -1,0 +1,57 @@
+<div *ngIf="loading">
+  <app-loading></app-loading>
+</div>
+
+<div class="container position-relative">
+  <div class="navbar-welcome pt-2 pb-2">
+    <div class="row mr-0 ml-0 d-flex flex-row justify-content-between">
+      <div class="content-welcome col-sm-6 p-0 pt-2 pb-2">
+        <div class="card">
+          <div class="card-body p-0 pt-1 pb-1">
+            <h2 class="text-education col-md-12 p-0 mb-3">
+              Bienvenido a Mi Confa
+            </h2>
+            <div class="d-flex flex-column">
+              <div class="mb-3" *ngIf="login">
+                <button class="btn-logout btn" (click)="logout()">
+                  Salida segura
+                </button>
+              </div>
+            </div>
+          </div>
+          <h3 class="red">Ambiente de pruebas</h3>
+        </div>
+      </div>
+
+      <div class="content-user col-sm-6 p-0 pt-2 pb-2">
+        <div *ngIf="login" class="card">
+          <div class="no-gutters d-flex flex-row justify-content-end">
+            <div
+              class="d-flex justify-content-center align-items-center animate__animated animate__fadeIn animate__fast"
+            >
+              <img src="assets/img/co.png" class="card-img m-2" alt="CO" />
+            </div>
+            <div>
+              <div class="card-body p-0 pl-2 pr-0">
+                <p class="m-0 font-weight-bold">
+                  Asesor: {{ utilitiesService.fullNameUser | titlecase }}
+                </p>
+                <h4 class="text-education-h4 m-0">
+                  {{ utilitiesService.fullNameAsesor | titlecase }}
+                </h4>
+                <p class="card-text m-0 font-weight-bold">
+                  <span>C.C.</span>
+                  {{ utilitiesService.documentUser }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Debe de ir dentro del router-outlet para que detecte las rutas activatedRouter -->
+<!-- Modal Content -->
+<app-modal-content></app-modal-content>

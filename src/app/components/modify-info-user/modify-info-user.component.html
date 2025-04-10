@@ -1,0 +1,189 @@
+
+<div class="bg-color">
+    <section class="container">
+        <div class="transferencia">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="cita-1 pt-4 pb-4">
+                        <h5 class="col-sm-10 p-1">Actualiza tus datos</h5>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+            <div class="informacion col-12 shadow p-5 ">
+
+                <form class="formulario" [formGroup]="formUpdate">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="select-modify form-group-custom">
+                                <label class="m-0 mb-1">Tipo de documento (*)</label>
+                                <select class="form-control" id="typeDocument" name="typeDocument" 
+                                    formControlName="typeDocument" placeholder="* Tipo Documento" required    
+                                    [ngClass]="{ 'is-invalid': (submitted || f.typeDocument.touched) && f.typeDocument.errors }">
+                                    <option value="" selected disabled>Selecciona una respuesta</option>
+                                        <option value="TI">Tarjeta de identidad</option>
+                                        <option value="RC">Registro Civil</option>
+                                        <option value="CC">Cédula de Ciudadanía</option>
+                                        <option value="CE">Cédula de Extranjería</option>
+                                        <option value="P">Pasaporte</option>
+                                        <option value="PEP">Permiso especial de permanencia</option>
+                                        <option value="PPP">Permiso de protección personal</option>
+                                </select>
+                                <div *ngIf="(submitted || f.typeDocument.touched) && f.typeDocument.errors?.required"
+                                class="invalid-feedback animated fadeIn fast">
+                                <span class="badge badge-pill badge-danger d-block mt-2 pt-1 pb-1 pr-2 pl-2 text-left">
+                                    DEBES SELECCIONAR UN TIPO DE DOCUMENTO</span>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group form-group-custom">
+                                <label class="m-0 mb-1">Documento</label>
+                                <input  placeholder="* Documento" formControlName="document" type="text"
+                                    class="form-control" id="document" name="document" placement="right" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group  form-group-custom">
+
+                                <label class="m-0 mb-1">Primer nombre</label>
+                                <input type="text"
+                                formControlName="firstName"  class="form-control"
+                                placeholder="* Primer nombre" placement="right" autocomplete="off"
+                                >
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group  form-group-custom">
+                                <label class="m-0 mb-1">Segundo nombre</label>
+                                <input type="text" formControlName="secondName" class="form-control"
+                                    placeholder="Segundo nombre" placement="right" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group  form-group-custom">
+                                <label class="m-0 mb-1">Primer apellido</label>
+                                <input   type="text" formControlName="firstLastName" class="form-control"
+                                    placeholder="* Primer apellido" placement="right" autocomplete="off">
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group  form-group-custom">
+                                <label class="m-0 mb-1">Segundo apellido</label>
+                                <input  type="text" formControlName="secondLastName" class="form-control"
+                                    placeholder="Segundo apellido" placement="right" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group form-group-custom">
+                                <label class="m-0 mb-1">Fecha de nacimiento (*)</label>
+                                <input  type="date" formControlName="birthDate" class="form-control" 
+                                 [max]="getCurrentDate()" placeholder="* Fecha de nacimiento" placement="right"
+                                  autocomplete="off" required [class.is-invalid]="getBirthDate">
+                                    <div *ngIf="(submitted || f.birthDate.touched) && f.birthDate.errors?.required "
+                                    class="invalid-feedback animated fadeIn fast">
+                                    <span class="badge badge-pill badge-danger d-block mt-2 pt-1 pb-1 pr-2 pl-2 text-left">
+                                        DEBES INGRESAR UNA FECHA DE NACIMIENTO
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group form-group-custom">
+                                <label class="m-0 mb-1" for="celular">Celular (*)</label>
+                                <input placeholder="* Celular" formControlName="celular" type="number"
+                                    class="form-control" id="celular" name="celular" placement="right" [class.is-invalid]="getCelular"/>
+                                    <div *ngIf="(submitted || f.celular.touched) && f.celular.errors?.pattern"
+                                    class="invalid-feedback animated fadeIn fast">
+                                    <span class="badge badge-pill badge-danger d-block mt-2 pt-1 pb-1 pr-2 pl-2 text-left">
+                                       DEBES INGRESAR UN NÚMERO DE CELULAR VÁLIDO</span>
+                                   </div>
+                                    <div *ngIf="(submitted || f.celular.touched) && f.celular.errors?.required"
+                                    class="invalid-feedback animated fadeIn fast">
+                                    <span class="badge badge-pill badge-danger d-block mt-2 pt-1 pb-1 pr-2 pl-2 text-left">
+                                        DEBES INGRESAR UN NÚMERO DE CELULAR</span>
+                                    </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group form-group-custom">
+                                <label class="m-0 mb-1" for="direccion">Dirección (*)</label>
+                                <input   placeholder="* Dirección" type="text" class="form-control" id="direccion"
+                                    name="direccion" formControlName="direccion" placement="right" [class.is-invalid]="getDireccion"/>
+                                    <div *ngIf="(submitted || f.direccion.touched) && f.direccion.errors?.required"
+                                    class="invalid-feedback animated fadeIn fast">
+                                    <span class="badge badge-pill badge-danger d-block mt-2 pt-1 pb-1 pr-2 pl-2 text-left">
+                                        DEBES INGRESAR UNA DIRECCIÓN</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group  form-group-custom">
+                                <label class="m-0 mb-1">Correo electrónico</label>
+                                <input type="email" formControlName="email" class="form-control"
+                                    placeholder="* E-mail electrónico" placement="right" autocomplete="off" email>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+
+
+                        <div class="col-md-6">
+                            <div class="form-group  form-group-custom">
+                                <label class="m-0 mb-1">Confimar correo electrónico</label>
+                                <input type="email" formControlName="confirmEmail" class="form-control"
+                                    placeholder="* Confimar E-mail" placement="right" autocomplete="off" email
+                                    onpaste="return false" oncut="return false" oncopy="return false">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 text-left pl-1">
+                        <div class="form-group  form-group-custom" style="font-size: 11px;">
+                            * Los campos que tienen asterisco son obligatorios
+                        </div>
+
+                    </div>
+                  
+                    <div class="row m-5" style="margin-left: auto; margin-right:auto;">
+                        <div class="col-md-6">
+                            <button [disabled]="utilitiesService.loading" (click)="actualizarDatosContacto()"
+                                class="btn-questions btn btn-block mt-1 mb-1">
+                                <span *ngIf="utilitiesService.loading"
+                                    class="spinner-border spinner-border-sm mr-1"></span>
+                                Guardar
+                            </button>
+                        </div>
+                        <div class="col-md-6" >
+                            <button (click)="logout()"
+                                class="btn-outline-questions btn btn-block mt-1 mb-1">
+                                Cancelar
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </section>
+</div>
+
+<app-modal-content></app-modal-content>

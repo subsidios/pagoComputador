@@ -1,0 +1,45 @@
+<app-welcome></app-welcome>
+<ng-container *ngIf="toast2">
+  <div *ngIf="toast" class="alert alert-success container" role="alert">
+    {{ respuestaFacial["detalle"] }}
+  </div>
+  <div *ngIf="!toast" class="alert alert-danger container" role="alert">
+    {{ respuestaFacial["detalle"] }}
+  </div>
+</ng-container>
+<section class="fondo">
+  <div class="container2">
+    <div class="row">
+      <div class="col-12 col-md-5 mt-4 mb-4">
+        <div class="text1">
+          <h3 class="p-4">
+            Así protegemos tu cuenta. Por favor, mira de frente a la cámara. Te
+            recomendamos no usar gafas oscuras, tapabocas o gorras
+          </h3>
+        </div>
+      </div>
+      <div class="col-12 col-md-7 d-flex justify-content-center">
+        <div
+          class="
+            card-login card
+            border
+            d-flex
+            flex-column
+            align-items-center align-items-stretch
+            mt-4
+            mb-4
+          "
+        >
+          <!-- <div          [ngClass]="tamano ? 'margenModal' : 'm-0'"
+        ></div> -->
+          <div class="card-body card-body-login animated fadeIn fast">
+            <app-camera (pictureTaken)="handleImage($event)"></app-camera>
+            <!-- <div class="snapshot" *ngIf="webcamImage">
+                <img [src]="webcamImage.imageAsDataUrl" />
+              </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

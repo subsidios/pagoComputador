@@ -1,0 +1,48 @@
+<form
+  class="form-login needs-validation"
+  autocomplete="off"
+  [formGroup]="formLogin"
+  (ngSubmit)="onSubmit()"
+>
+  <div class="form-group form-group-custom">
+    <div class="form-group form-group-custom conteninputlabelform">
+      <label class="m-0 labelLoginHome">Selecciona el tipo de documento</label>
+      <div class="card card-custom-select">
+        <div class="content-custom-select">
+          <select
+            class="form-control inputloginsimulador"
+            formControlName="tpDoc"
+            (change)="capturar($event.target.value)"
+            [class.is-invalid]="getTpDoc"
+          >
+            <option value="" hidden selected>
+              * Selecciona el tipo de documento
+            </option>
+            <option value="C">Cédula de ciudadanía</option>
+            <option value="E">Cédula extranjería</option>
+            <option value="T">Tarjeta de identidad</option>
+            <option value="R">Registro civil</option>
+          </select>
+          <i class="icon-down1 fas fa-chevron-down pl-2"></i>
+        </div>
+      </div>
+      <span
+        *ngIf="getTpDoc"
+        class="badge badge-pill badge-danger cf-badge d-block mt-2 text-left"
+        >DEBES SELECCIONAR UN TIPO DE DOCUMENTO PARA INICIAR SESIÓN</span
+      >
+    </div>
+  </div>
+  <div class="form-group m-0">
+    <button
+      [disabled]="utilitiesService.loading"
+      class="btn btn-credits btn-block mt-1 mb-3"
+    >
+      <span
+        *ngIf="utilitiesService.loading"
+        class="spinner-border spinner-border-sm mr-1"
+      ></span>
+      Validar
+    </button>
+  </div>
+</form>

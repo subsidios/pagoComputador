@@ -1,0 +1,1051 @@
+<!-- Button error -->
+<button
+  type="button"
+  class="btn-modal-token-expired btn btn-primary"
+  data-toggle="modal"
+  data-target="#modalTokenExpired"
+>
+  Modal token expired
+</button>
+
+<!-- Modal token expired  -->
+<div
+  class="modal fade modal-token-expired"
+  id="modalTokenExpired"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modalTokenExpiredLabel"
+  aria-hidden="true"
+  data-backdrop="static"
+  data-keyboard="false"
+>
+  <div
+    class="modal-dialog modal-dialog-centered justify-content-center"
+    role="document"
+  >
+    <div class="modal-content">
+      <div class="modal-header error-header" id="modalTokenExpiredLabel">
+        <div>
+          <div class="d-flex align-items-center justify-content-center m-4">
+            <i aria-hidden="true" class="fa fa-exclamation-circle fa-3x"></i>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="text-center p-2">
+          <h6 class="m-0 pt-3 pb-3">
+            {{ utilitiesService.messageTitleModal }}
+          </h6>
+          <div class="m-0 pt-3 pb-3">
+            <span *ngIf="utilitiesService.messageModal">
+              <p class="text-center m-0">{{ utilitiesService.messageModal }}</p>
+            </span>
+          </div>
+        </div>
+        <div class="p-2">
+          <div class="d-flex">
+            <button
+              type="button"
+              class="btn-close btn btn-block"
+              data-dismiss="modal"
+              aria-label="Close"
+              data-backdrop="false"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button modal success -->
+<button
+  type="button"
+  class="btn-modal-success btn btn-primary"
+  data-toggle="modal"
+  data-target="#modalSuccess"
+>
+  Modal success
+</button>
+
+<!-- Modal success -->
+<div
+  class="modal fade modal-success"
+  id="modalSuccess"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modalSuccessLabel"
+  aria-hidden="true"
+  data-backdrop="static"
+  data-keyboard="false"
+>
+  <div
+    class="modal-dialog modal-dialog-centered justify-content-center"
+    role="document"
+  >
+    <div class="modal-content">
+      <div class="modal-header success-header" id="modalSuccessLabel">
+        <div>
+          <div class="d-flex align-items-center justify-content-center m-3">
+            <img
+              class="logo animated fadeIn fast"
+              src="\assets\img\logo_reverse.png"
+              alt=""
+            />
+          </div>
+          <div class="d-flex align-items-center justify-content-center m-3">
+            <img
+              class="icon animated fadeIn fast"
+              src="assets/img/success.png"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="text-center p-2">
+          <h6 class="m-0 pt-3 pb-3">
+            {{ utilitiesService.messageTitleModal }}
+          </h6>
+          <div class="m-0 pt-3 pb-3">
+            <p class="m-0">{{ utilitiesService.messageModal }}</p>
+            <p class="m-0" *ngIf="utilitiesService.recoveryEmail">
+              {{ utilitiesService.recoveryEmail | indicationEmail : true }}
+            </p>
+          </div>
+        </div>
+        <div class="p-2">
+          <div class="d-flex">
+            <button
+              type="button"
+              class="btn-next btn btn-block"
+              data-dismiss="modal"
+              aria-label="Close"
+              (click)="backLogin(utilitiesService.backLogin)"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button modal success -->
+<!-- <button type="button" class="btn-modal-success btn btn-primary" data-toggle="modal" data-target="#modalSuccess">
+  Modal success
+</button>
+
+<div class="modal fade modal-success" id="modalSuccess" tabindex="-1" role="dialog" aria-labelledby="modalSuccessLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered justify-content-center" role="document">
+        <div class="modal-content">
+            <div class="modal-header success-header" id="modalSuccessLabel">
+                <div>
+                    <div class="d-flex align-items-center justify-content-center m-4">
+                        <img src="assets/img/success.png" class="animate__animated animate__fadeIn animate__fast">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="text-center p-2">
+                    <h6 class="m-0 pt-3 pb-3">{{ utilitiesService.messageTitleModal }}</h6>
+                    <div class="m-0 pt-3 pb-3">
+                        <p class="m-0">{{ utilitiesService.messageModal }}</p>
+                        <p class="m-0" *ngIf="utilitiesService.recoveryEmail">{{ utilitiesService.recoveryEmail | indicationEmail:true }}</p>
+                    </div>
+                </div>
+                <div class="p-2">
+                    <div class="d-flex">
+                        <button type="button" class="btn-close btn btn-block" data-dismiss="modal"
+                        aria-label="Close" (click)="backLogin(utilitiesService.backLogin)">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- Button modal success pago en linea -->
+<button
+  type="button"
+  class="btn-modal-success-payu btn btn-primary"
+  data-toggle="modal"
+  data-target="#modalSuccess-payu"
+>
+  Modal success
+</button>
+
+<!-- Modal success pago en linea -->
+<div
+  class="modal fade modal-success-payu"
+  id="modalSuccess-payu"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modalSuccessPayuLabel"
+  aria-hidden="true"
+  data-backdrop="static"
+  data-keyboard="false"
+>
+  <div
+    class="modal-dialog modal-dialog-centered justify-content-center"
+    role="document"
+  >
+    <div class="modal-content">
+      <div class="modal-header success-header" id="modalSuccessPayuLabel">
+        <div>
+          <div class="d-flex align-items-center justify-content-center m-4">
+            <img
+              src="assets/img/success.png"
+              class="animate__animated animate__fadeIn animate__fast"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="text-center p-2">
+          <h6 class="m-0 pt-3 pb-3">
+            {{ utilitiesService.messageTitleModal }}
+          </h6>
+          <div class="m-0 pt-3 pb-3">
+            <p class="m-0">{{ utilitiesService.messageModal }}</p>
+            <p class="m-0" *ngIf="utilitiesService.recoveryEmail">
+              {{ utilitiesService.recoveryEmail | indicationEmail : true }}
+            </p>
+          </div>
+        </div>
+        <div class="p-2">
+          <div class="d-flex">
+            <button
+              type="button"
+              class="btn-close btn btn-block"
+              data-dismiss="modal"
+              aria-label="Close"
+              (click)="backLogin(utilitiesService.backLogin)"
+            >
+              Continuar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button modal error -->
+<button
+  type="button"
+  class="btn-modal-error btn btn-primary"
+  data-toggle="modal"
+  data-target="#modalError"
+>
+  Modal error
+</button>
+
+<!-- Modal error -->
+<div
+  class="modal fade modal-error"
+  id="modalError"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modalErrorLabel"
+  aria-hidden="true"
+  data-backdrop="static"
+  data-keyboard="false"
+>
+  <div
+    class="modal-dialog modal-dialog-centered justify-content-center"
+    role="document"
+  >
+    <div class="modal-content">
+      <div class="modal-header error-header" id="modalErrorLabel">
+        <div>
+          <div>
+            <div class="d-flex align-items-center justify-content-center m-3">
+              <img
+                class="logo animated fadeIn fast"
+                src="\assets\img\logo_reverse.png"
+                alt=""
+              />
+            </div>
+            <div class="d-flex align-items-center justify-content-center m-3">
+              <img
+                class="icon animated fadeIn fast"
+                src="\assets\img\error2.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="text-center p-2">
+          <h6 class="m-0 pt-3 pb-3">
+            {{ utilitiesService.messageTitleModal }}
+          </h6>
+          <div class="m-0 pt-3 pb-3">
+            <p class="m-0">{{ utilitiesService.messageModal }}</p>
+          </div>
+        </div>
+        <div class="p-2">
+          <div class="d-flex">
+            <button
+              type="button"
+              class="btn-close btn btn-block"
+              data-dismiss="modal"
+              aria-label="Close"
+              (click)="backLogin(utilitiesService.backLogin)"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button modal error -->
+<!-- <button type="button" class="btn-modal-error btn btn-primary" data-toggle="modal" data-target="#modalError">
+  Modal error
+</button>
+<div class="modal fade modal-error" id="modalError" tabindex="-1" role="dialog" aria-labelledby="modalErrorLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered justify-content-center" role="document">
+        <div class="modal-content">
+            <div class="modal-header error-header" id="modalErrorLabel">
+                <div>
+                    <div class="d-flex align-items-center justify-content-center m-4">
+                        <img src="assets/img/error.png" class="animate__animated animate__fadeIn animate__fast">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="text-center p-2">
+                    <h6 class="m-0 pt-3 pb-3">{{ utilitiesService.messageTitleModal }}</h6>
+                    <div class="m-0 pt-3 pb-3">
+                        <p class="m-0">{{ utilitiesService.messageModal }}</p>
+                    </div>
+                </div>
+                <div class="p-2">
+                    <div class="d-flex">
+                        <button type="button" class="btn-close btn btn-block" data-dismiss="modal" aria-label="Close" (click)="backLogin(utilitiesService.backLogin)">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- Button modal error simulador -->
+<button
+  type="button"
+  class="btn-modal-errorSimulador btn btn-primary"
+  data-toggle="modal"
+  data-target="#modalErrorSim"
+>
+  Modal error
+</button>
+
+<!-- Modal error simulador -->
+<div
+  class="modal fade modal-errors"
+  id="modalErrorSim"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modalErrorLabel"
+  aria-hidden="true"
+  data-backdrop="static"
+  data-keyboard="false"
+>
+  <div
+    class="modal-dialog modal-dialog-centered justify-content-center"
+    role="document"
+  >
+    <div class="modal-content">
+      <div class="modal-header error-header" id="modalErrorLabel">
+        <div>
+          <div class="d-flex align-items-center justify-content-center m-4">
+            <img
+              src="assets/img/error.png"
+              class="animate__animated animate__fadeIn animate__fast"
+            />
+            <!-- <i aria-hidden="true" class="fa fa-exclamation-circle fa-3x"></i> -->
+          </div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="text-center p-2">
+          <div class="m-0 pt-3 pb-3">
+            <p class="m-0">{{ utilitiesService.messageTitleModal }}</p>
+            <br />
+            <p class="ml-5 mr-5 pl-5 pr-5">
+              {{ utilitiesService.messageModal }}
+            </p>
+            <br />
+            <p class="m-0">
+              <span class="numerSimulador">8783111</span> (Ext. 1117 - 1338 -
+              1353)
+            </p>
+          </div>
+        </div>
+        <div class="p-2">
+          <div class="d-flex">
+            <button
+              type="button"
+              class="btn-close btn btn-block"
+              data-dismiss="modal"
+              aria-label="Close"
+              (click)="backLogin(utilitiesService.backLogin)"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button modal  simulador convenio empresa -->
+<button
+  type="button"
+  class="btn-modal-convenioEmpresa btn btn-primary"
+  data-toggle="modal"
+  data-target="#modalconvenioEmpresa"
+>
+  Modal error
+</button>
+
+<!-- Modal error simulador convenio empresa -->
+<div
+  class="modal fade modal-convenioEmpresa"
+  id="modalconvenioEmpresa"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modalErrorLabel"
+  aria-hidden="true"
+  data-backdrop="static"
+  data-keyboard="false"
+>
+  <div
+    class="modal-dialog modal-dialog-centered justify-content-center"
+    role="document"
+  >
+    <div class="modal-content">
+      <div class="modal-header error-header" id="modalErrorLabel">
+        <div>
+          <div class="d-flex align-items-center justify-content-center">
+            <i aria-hidden="true" class="fa fa-exclamation-circle fa-3x"></i>
+          </div>
+          <div class="d-flex align-items-center justify-content-center">
+            Tu empresa no tiene convenio vigente para créditos.
+          </div>
+          <div
+            class="d-flex align-items-center justify-content-center pr-5 pl-5"
+          >
+            Te invitamos a consultar con tu empresa para tramitar el acuerdo de
+            descuentos.
+          </div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="text-center p-2">
+          <div class="m-0 pt-3 pb-3">
+            <p class="mr-4 ml-4">
+              Descarga
+              <a
+                href="assets/data/formulario convenio empresa.pdf"
+                download="fortmato_para_realizar_convenio_empresa.pdf"
+                class="numerSimulador"
+                >Aquí</a
+              >
+              el fortmato para realizar el convenio con tu empresa
+            </p>
+          </div>
+        </div>
+        <div class="p-2">
+          <div class="d-flex">
+            <button
+              type="button"
+              class="btn-close btn btn-block"
+              data-dismiss="modal"
+              aria-label="Close"
+              (click)="navigatecreditsimulador()"
+            >
+              Continuar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button warning -->
+<button
+  type="button"
+  class="btn-modal-warning btn btn-primary"
+  data-toggle="modal"
+  data-target="#modalWarning"
+>
+  Modal warning
+</button>
+
+<!-- Modal warning -->
+<div
+  class="modal fade modal-warning"
+  id="modalWarning"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modalWarningLabel"
+  aria-hidden="true"
+  data-backdrop="static"
+  data-keyboard="false"
+>
+  <div
+    class="modal-dialog modal-dialog-centered justify-content-center"
+    role="document"
+  >
+    <div class="modal-content">
+      <div class="modal-header warning-header" id="modalWarningLabel">
+        <div>
+          <div>
+            <div class="d-flex align-items-center justify-content-center m-3">
+              <img
+                class="logo animated fadeIn fast"
+                src="\assets\img\logo_reverse.png"
+                alt=""
+              />
+            </div>
+            <div class="d-flex align-items-center justify-content-center m-3">
+              <img
+                class="icon animated fadeIn fast"
+                src="\assets\img\alert.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="text-center p-2">
+          <h6 class="m-0 pt-3 pb-3">
+            {{ utilitiesService.messageTitleModal }}
+          </h6>
+          <div class="m-0 pt-3 pb-3">
+            <p class="m-0">{{ utilitiesService.messageModal }}</p>
+          </div>
+        </div>
+        <div class="p-2">
+          <div class="d-flex">
+            <button
+              type="button"
+              class="btn-close btn btn-block"
+              data-dismiss="modal"
+              aria-label="Close"
+              (click)="backLogin(utilitiesService.backLogin)"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button warning -->
+<button
+  type="button"
+  class="btn-modal-warning-asesor btn btn-primary"
+  data-toggle="modal"
+  data-target="#modalWarningAsesor"
+  hidden="false"
+>
+  Modal warning
+</button>
+
+<!-- Modal warning -->
+<div
+  class="modal fade modal-warning"
+  id="modalWarningAsesor"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modalWarningLabel"
+  aria-hidden="true"
+  data-backdrop="static"
+  data-keyboard="false"
+>
+  <div
+    class="modal-dialog modal-dialog-centered justify-content-center"
+    role="document"
+  >
+    <div class="modal-content">
+      <div class="modal-header warning-header" id="modalWarningLabel">
+        <div>
+          <div>
+            <div class="d-flex align-items-center justify-content-center m-3">
+              <img
+                class="logo animated fadeIn fast"
+                src="\assets\img\logo_reverse.png"
+                alt=""
+              />
+            </div>
+            <div class="d-flex align-items-center justify-content-center m-3">
+              <img
+                class="icon animated fadeIn fast"
+                src="\assets\img\alert.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="text-center p-2">
+          <h6 class="m-0 pt-3 pb-3">
+            {{ utilitiesService.messageTitleModal }}
+          </h6>
+          <div class="m-0 pt-3 pb-3">
+            <p class="m-0">{{ utilitiesService.messageModal }}</p>
+          </div>
+        </div>
+        <div class="p-2">
+          <div class="d-flex">
+            <button
+              type="button"
+              class="btn-close btn btn-block"
+              data-dismiss="modal"
+              aria-label="Close"
+              (click)="cerrarModalAsesor()"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button warning -->
+<!-- <button type="button" class="btn-modal-warning btn btn-primary" data-toggle="modal" data-target="#modalWarning">
+  Modal warning
+</button>
+<div class="modal fade modal-warning" id="modalWarning" tabindex="-1" role="dialog" aria-labelledby="modalWarningLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered justify-content-center" role="document">
+        <div class="modal-content">
+            <div class="modal-header warning-header" id="modalWarningLabel">
+                <div>
+                    <div class="d-flex align-items-center justify-content-center m-4">
+                        <i aria-hidden="true" class="fa fa-exclamation-circle fa-3x"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="text-center p-2">
+                    <h6 class="m-0 pt-3 pb-3">{{ utilitiesService.messageTitleModal }}</h6>
+                    <div class="m-0 pt-3 pb-3">
+                        <p class="m-0">{{ utilitiesService.messageModal }}</p>
+                    </div>
+                </div>
+                <div class="p-2">
+                    <div class="d-flex">
+                        <button type="button" class="btn-close btn btn-block" data-dismiss="modal" aria-label="Close" (click)="backLogin(utilitiesService.backLogin)">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- Button modal  simulador envio de formulario de contacto -->
+<button
+  type="button"
+  class="btn-modal-formulariocontactoenvio btn btn-primary"
+  data-toggle="modal"
+  data-target="#formulariocontactoenvio"
+>
+  Modal error
+</button>
+
+<!-- Modal error simulador -->
+<div
+  class="modal fade modal-errors"
+  id="formulariocontactoenvio"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modalErrorLabel"
+  aria-hidden="true"
+  data-backdrop="static"
+  data-keyboard="false"
+>
+  <div
+    class="modal-dialog modal-dialog-centered justify-content-center"
+    role="document"
+  >
+    <div class="modal-content">
+      <div class="modal-header error-header" id="modalErrorLabel">
+        <div>
+          <div class="d-flex align-items-center justify-content-center m-4">
+            <img
+              src="assets/img/success.png"
+              class="animate__animated animate__fadeIn animate__fast"
+            />
+            <!-- <i aria-hidden="true" class="fa fa-exclamation-circle fa-3x"></i> -->
+          </div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="text-center p-2">
+          <div class="m-0 pt-3 pb-3 ml-3 mr-3">
+            <p class="m-0" style="font-size: 20px !important; line-height: 1">
+              ¡Tu información ha sido enviada correctamente!
+            </p>
+            <p style="font-size: 20px !important; line-height: 1">
+              Un asesor te contactará.
+            </p>
+            <br />
+            <p class="m-0" style="font-size: 20px !important; line-height: 1">
+              Horario de atención:
+            </p>
+            <p style="font-size: 20px !important; line-height: 1">
+              lunes a viernes de 8 a.m. a 12 m. y de 2 p.m. a 6 p.m.
+            </p>
+          </div>
+        </div>
+        <div class="p-2">
+          <div class="d-flex">
+            <button
+              type="button"
+              class="btn-close btn btn-block"
+              data-dismiss="modal"
+              aria-label="Close"
+              (click)="backLogin(utilitiesService.backLogin)"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button modal success -->
+<button
+  type="button"
+  class="btn-modal-success-validate btn btn-primary"
+  data-toggle="modal"
+  data-target="#modal-success-validate"
+>
+  Modal success Validate
+</button>
+
+<!-- Modal success -->
+<div
+  class="modal fade modal-success-validate"
+  id="modal-success-validate"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modal-success-validateLabel"
+  aria-hidden="true"
+  data-backdrop="static"
+  data-keyboard="false"
+>
+  <div
+    class="modal-dialog modal-dialog-centered justify-content-center"
+    role="document"
+  >
+    <div class="modal-content">
+      <div
+        class="modal-header success-header-validate"
+        id="modal-success-validateLabel"
+      >
+        <div>
+          <div class="d-flex align-items-center justify-content-center m-3">
+            <img
+              class="logo animated fadeIn fast"
+              src="\assets\img\logo_reverse.png"
+              alt=""
+            />
+          </div>
+          <div class="d-flex align-items-center justify-content-center m-3">
+            <img
+              class="icon animated fadeIn fast"
+              src="assets/img/success.png"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="text-center p-2">
+          <h6 class="m-0 pt-3 pb-3">
+            {{ utilitiesService.messageTitleModal }}
+          </h6>
+          <div class="m-0 pt-3 pb-3">
+            <p class="m-0">{{ utilitiesService.messageModal }}</p>
+          </div>
+        </div>
+        <div class="p-2">
+          <div class="d-flex">
+            <button
+              type="button"
+              class="btn-next btn btn-block"
+              data-dismiss="modal"
+              aria-label="Close"
+              (click)="
+                continue(utilitiesService.backHome, utilitiesService.backModify)
+              "
+            >
+              Continuar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button error -->
+<button
+  type="button"
+  class="btn-modal-error-questions-register btn btn-primary"
+  data-toggle="modal"
+  data-target="#modalErrorQuestions"
+>
+  Modal error questions register
+</button>
+
+<!-- Modal error -->
+<div
+  class="modal fade modal-error"
+  id="modalErrorQuestions"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modalErrorLabel"
+  aria-hidden="true"
+  data-backdrop="static"
+  data-keyboard="false"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header error-header" id="modalErrorLabel">
+        <div>
+          <div class="d-flex align-items-center justify-content-center m-3">
+            <img
+              class="logo animated fadeIn fast"
+              src="\assets\img\logo_reverse.png"
+              alt=""
+            />
+          </div>
+          <div class="d-flex align-items-center justify-content-center m-3">
+            <img
+              class="icon animated fadeIn fast"
+              src="\assets\img\error2.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="text-center p-2">
+          <h6 class="m-0 pt-3 pb-3">
+            {{ utilitiesService.messageTitleModal }}
+          </h6>
+          <div class="m-0 pt-3 pb-3">
+            <span *ngIf="utilitiesService.messageModal == ''">
+              <p class="m-0">Intenta nuevamente o comunícate a</p>
+              <p class="m-0">confa@confa.co</p>
+            </span>
+            <span *ngIf="utilitiesService.messageModal != ''">
+              <p class="text-center m-0">{{ utilitiesService.messageModal }}</p>
+            </span>
+          </div>
+          <div
+            class="info-contact-us"
+            *ngIf="
+              utilitiesService.messageModal == utilitiesService.errorInfoLogin
+            "
+          >
+            <p class="m-0">Si tienes alguna duda, también puedes llamarnos:</p>
+            <p
+              *ngFor="let lineaAtencion of attentionService.lineasAtencion"
+              class="m-0"
+            >
+              <span class="education-color"
+                >{{ lineaAtencion.nombreSede }}: </span
+              >{{ lineaAtencion.telefonos }} {{ lineaAtencion.extensiones }}
+            </p>
+          </div>
+        </div>
+        <div class="p-2">
+          <div class="d-flex">
+            <button
+              type="button"
+              class="btn-close btn btn-block"
+              data-dismiss="modal"
+              aria-label="Close"
+              (click)="backLogin2(utilitiesService.backLogin)"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button modal success -->
+<button
+  type="button"
+  class="btn-modal-success-asesor btn btn-primary"
+  data-toggle="modal"
+  data-target="#modalSuccessAsesor"
+  hidden="false"
+>
+  Modal success
+</button>
+
+<!-- Modal success -->
+<div
+  class="modal fade modal-success"
+  id="modalSuccessAsesor"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modalSuccessLabel"
+  aria-hidden="true"
+  data-backdrop="static"
+  data-keyboard="false"
+>
+  <div
+    class="modal-dialog modal-dialog-centered justify-content-center"
+    role="document"
+  >
+    <div class="modal-content">
+      <div class="modal-header success-header" id="modalSuccessLabel">
+        <div>
+          <div class="d-flex align-items-center justify-content-center m-3">
+            <img
+              class="logo animated fadeIn fast"
+              src="\assets\img\logo_reverse.png"
+              alt=""
+            />
+          </div>
+          <div class="d-flex align-items-center justify-content-center m-3">
+            <img
+              class="icon animated fadeIn fast"
+              src="assets/img/success.png"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="text-center p-2">
+          <h6 class="m-0 pt-3 pb-3">
+            {{ utilitiesService.messageTitleModal }}
+          </h6>
+          <div class="m-0 pt-3 pb-3">
+            <p class="m-0">{{ utilitiesService.messageModal }}</p>
+            <p class="m-0" *ngIf="utilitiesService.recoveryEmail">
+              {{ utilitiesService.recoveryEmail | indicationEmail : true }}
+            </p>
+          </div>
+        </div>
+        <div class="p-2">
+          <div class="d-flex">
+            <button
+              type="button"
+              class="btn-next btn btn-block"
+              data-dismiss="modal"
+              aria-label="Close"
+              (click)="backLogin(utilitiesService.backLogin)"
+            >
+              Continuar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button modal success pago en linea -->
+<button
+  type="button" hidden="false"
+  class="btn-modal-success-payu-t btn btn-primary"
+  data-toggle="modal"
+  data-target="#modalSuccess-payu-t"
+>
+  Modal succesa payu
+</button>
+
+<!-- Modal success pago en linea -->
+<div 
+  class="modal fade modal-success"
+  id="modalSuccess-payu-t"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modalSuccessLabel"
+  aria-hidden="true"
+  data-backdrop="static"
+  data-keyboard="false"
+>
+  <div
+    class="modal-dialog modal-dialog-centered justify-content-center"
+    role="document"
+  >
+    <div class="modal-content">
+      <div class="modal-header success-header" id="modalSuccessLabel">
+        <!-- <div>
+                    <div class="d-flex align-items-center justify-content-center m-4">
+                        <img src="assets/img/success.png" class="animate__animated animate__fadeIn animate__fast">
+                    </div>
+                </div> -->
+        <div>
+          <div class="d-flex align-items-center justify-content-center m-3">
+            <img
+              class="logo animated fadeIn fast"
+              src="\assets\img\logo_reverse.png"
+              alt=""
+            />
+          </div>
+          <div class="d-flex align-items-center justify-content-center m-3">
+            <img
+              class="icon animated fadeIn fast"
+              src="assets/img/success.png"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="text-center p-2">
+          <h6 class="m-0 pt-3 pb-3">
+            {{ utilitiesService.messageTitleModal }}
+          </h6>
+          <div class="m-0 pt-3 pb-3">
+            <p class="m-0">{{ utilitiesService.messageModal }}</p>
+            <!-- <p class="m-0" *ngIf="utilitiesService.recoveryEmail">
+              {{ utilitiesService.recoveryEmail | indicationEmail : true }}
+            </p> -->
+          </div>
+        </div>
+        <div class="p-2">
+          <div class="d-flex">
+            <button
+              type="button"
+              class="btn-next btn btn-block"
+              data-dismiss="modal"
+              aria-label="Close"
+              (click)="redirigirPago()"
+            >
+              Continuar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

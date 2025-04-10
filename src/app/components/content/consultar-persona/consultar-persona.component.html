@@ -1,0 +1,122 @@
+<app-welcome-asesor></app-welcome-asesor>
+<ng-container *ngIf="toast2">
+  <div *ngIf="toast" class="alert alert-success container" role="alert">
+    {{ respuestaFacial["detalle"] }}
+  </div>
+  <div *ngIf="!toast" class="alert alert-danger container" role="alert">
+    {{ respuestaFacial["detalle"] }}
+  </div>
+</ng-container>
+<section class="fondo">
+  <div class="container2">
+    <div class="row">
+      <div
+        class="col-12 col-md-5 mt-4 mb-4 d-flex flex-column align-items-center justify-content-center"
+      >
+        <div class="text2" style="width: 85% !important">
+          <form
+            class="form-login needs-validation card p-3"
+            autocomplete="off"
+            [formGroup]="formConsulta"
+            (ngSubmit)="validateDocument()"
+          >
+            <div class="form-group form-group-custom">
+              <label for="document" class="m-0 mb-1"
+                >Número de documento del cliente</label
+              >
+              <input
+                type="number"
+                formControlName="document"
+                class="form-control form-control-sm sinFlechas"
+                placeholder="* Número de documento"
+                placement="right"
+                min="1"
+                [class.is-invalid]="getDocument"
+                [readOnly]="mostrarCamera"
+              />
+              <div
+                *ngIf="getDocument"
+                class="invalid-feedback animate__animated animate__fadeIn animate__fast"
+              >
+                <span
+                  class="badge badge-pill badge-danger d-block mt-2 text-left"
+                  >NÚMERO DE DOCUMENTO ES REQUERIDO</span
+                >
+              </div>
+              <div
+                *ngIf="f.document.touched && f.document.errors?.min"
+                class="invalid-feedback animate__animated animate__fadeIn animate__fast"
+              >
+                <span
+                  class="badge badge-pill badge-danger d-block mt-2 text-left"
+                >
+                  DEBES INGRESAR MÍNIMO 6 DÍGITOS</span
+                >
+              </div>
+              <div
+                *ngIf="f.document.touched && f.document.errors?.max"
+                class="invalid-feedback animate__animated animate__fadeIn animate__fast"
+              >
+                <span
+                  class="badge badge-pill badge-danger d-block mt-2 text-left"
+                >
+                  DEBES INGRESAR MÁXIMO 15 DÍGITOS</span
+                >
+              </div>
+              <div
+                *ngIf="f.document.touched && f.document.errors?.pattern"
+                class="invalid-feedback animate__animated animate__fadeIn animate__fast"
+              >
+                <span
+                  class="badge badge-pill badge-danger d-block mt-2 text-left"
+                  >DEBES INGRESAR DÍGITOS POSITIVOS</span
+                >
+              </div>
+              <div class="form-group m-0 mt-3 mb-3 text-center">
+                <button
+                  class="btn btn-credits btn-signin btn-block btn-sm"
+                  *ngIf="!mostrarCamera"
+                >
+                  <span
+                    *ngIf="utilitiesService.loading"
+                    class="spinner-border spinner-border-sm mr-1"
+                  ></span>
+                  Validar documento
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-credits btn-signin btn-block btn-sm"
+                  (click)="limpiarCampos()"
+                  *ngIf="mostrarCamera"
+                >
+                  Limpiar
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <br />
+        <div class="text1" style="padding-top: 0px !important">
+          <h3 class="p-4">
+            Así protegemos tu cuenta. Por favor, mira de frente a la cámara.
+          </h3>
+        </div>
+      </div>
+      <div
+        class="col-12 col-md-7 d-flex justify-content-center"
+        *ngIf="mostrarCamera"
+      >
+        <div
+          class="card-login card border d-flex flex-column align-items-center align-items-stretch mt-4 mb-4"
+        >
+          <div class="card-body card-body-login animated fadeIn fast">
+            <app-camera-asesor
+              [mostrarBoton]="mostrarCamera"
+              (pictureTaken)="handleImage($event)"
+            ></app-camera-asesor>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

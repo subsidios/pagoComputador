@@ -1,0 +1,141 @@
+.container {
+    margin-bottom: 83px;
+    font-family: Ubuntu, Medium;
+}
+
+div.cita-1 h5 {
+    font-family: Ubuntu, Poppins;
+    position: relative;
+    font-size: 30px;
+    line-height: 35px;
+    color: #03a9f4;
+    font-weight: bold;
+}
+
+div.cita-1 h5::before {
+    content: "";
+    background-color: #03a9f4;
+    position: absolute;
+    width: 181px;
+    height: 8px;
+    bottom: -10px;
+    border-radius: 5px;
+}
+
+.bg-color {
+    padding: 15px 0;
+    background-color: rgb(242, 242, 242);
+}
+
+.informacion {
+    padding-top: 14px;
+    background-color: white;
+    position: relative;
+    box-shadow: 0px 3px 6px rgba( 0, 0, 0, 0.16);
+}
+
+.boton-question {
+    background-color: #03a9f4;
+    border-color: #03a9f4;
+    color: #fff;
+    border-radius: 25px;
+    padding: 5px 20px;
+    outline: 0px;
+    font-family: Ubuntu, Poppins;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+
+div.select-modify{
+    margin-bottom: 1rem;
+}
+
+div.select-modify select {
+    padding: 5px 20px !important;
+    background-color: #eeeeee;
+    border-color: #cecece;
+    border-radius: 25px;
+    outline: 0px;
+    font-family: Ubuntu, Poppins;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+ div.select-modify label {
+    font-size: 10px;
+    line-height: 11px;
+    color: #666666;
+}
+
+
+
+ div.select-modify select option {
+    color: #8f8f8f;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+ div.select-modify select option:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+ div.select-modify select option:nth-child(even) {
+    background-color: #fff;
+}
+
+ div.select-modify i {
+    color: #03a9f4;
+    position: absolute;
+    bottom: 0em;
+    padding: 7px;
+    right: 1rem;
+    pointer-events: none;
+    width: 20px;
+    height: 20px;
+    display: block;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+
+
+button.btn-questions {
+    background-color: #03a9f4;
+    border-color: #03a9f4;
+    color: #fff;
+    border-radius: 25px;
+    padding: 5px 20px;
+    outline: 0px;
+    font-family: Ubuntu, Poppins;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+button.btn-questions:hover {
+    background-color: #fff;
+    color: #03a9f4;
+}
+
+button.btn-outline-questions {
+    background-color: #fff;
+    border-color: #03a9f4;
+    color: #03a9f4;
+    border-radius: 25px;
+    padding: 5px 20px;
+    outline: 0px;
+    font-family: Ubuntu, Poppins;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+button.btn-outline-questions:hover {
+    background-color: #03a9f4;
+    color: #fff;
+}
+
+

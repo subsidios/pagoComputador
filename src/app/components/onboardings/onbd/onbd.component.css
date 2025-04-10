@@ -1,0 +1,7 @@
+.modal-onboarding-video {
+  height: 340px !important;
+}
+
+.modal-onboarding-video .iframe {
+  height: -webkit-fill-available;
+}
