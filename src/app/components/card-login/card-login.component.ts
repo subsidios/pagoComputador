@@ -234,7 +234,7 @@ export class CardLoginComponent implements OnInit {
               this.utilitiesService.loading = false;
               this.infoPago = response;
               $('#modalPago').modal('show'); // Mostrar el modal
-
+              
             } else {
               this.utilitiesService.messageTitleModal = "Error consultando la información";
               this.utilitiesService.messageModal = response.mensaje
@@ -434,6 +434,10 @@ export class CardLoginComponent implements OnInit {
 
   redirigirPago() {
     console.log('redirigir pasarela');
+    if (!this.validarEmail(this.infoPago.email)) {
+      alert('Por favor ingrese un correo electrónico válido.');
+      return;
+    }
     //consumo para iniciar Transaccion
     //const radicado = this.encriptar(this.f.radicado.value);
     this.utilitiesService.loading = true;
@@ -480,6 +484,11 @@ export class CardLoginComponent implements OnInit {
 
   redirigirLogin() {
     this.router.navigate(['/login']);
+  }
+
+  validarEmail(email: string): boolean {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
   }
 }
 
