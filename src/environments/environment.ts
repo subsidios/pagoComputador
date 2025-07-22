@@ -55,6 +55,7 @@ export const environment = {
   // Development
   //apiConsultaInfo: "http://localhost:8081/pagoSubsidioEspecieWS/rest/", //ruta de pruebas apuntando a genesys
   apiConsultaInfo: "https://app.confa.co:8377/pagoSubsidioEspecieWS/rest/", //ruta de pruebas apuntando a genesys
+  //urlRetornoPagoCompu : "http://localhost:4200/#/login",
   urlRetornoPagoCompu : "https://app.confa.co:8355/#/login",
   /*   apiUrl: "http://localhost:4200/", */
   apiUrl: "https://app.confa.co:9340/",
