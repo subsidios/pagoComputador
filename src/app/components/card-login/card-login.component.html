@@ -170,8 +170,32 @@
       <div class="modal-body">
         <form>
           <div class="form-group form-group-custom">
-            <label>Categoría</label>
+            <label>Documento Trabajador</label>
+            <input type="text" class="form-control" [value]="infoPago.codigoTrabajador?.split('|')[1]" readonly/>
+          </div>
+          <div class="form-group form-group-custom">
+            <label>Nombre del Trabajador</label>
+            <input type="text" class="form-control" [value]="infoPago.nombreTrabajador" readonly />
+          </div>
+          <div class="form-group form-group-custom">
+            <label>Categoría Trabajador</label>
             <input type="text" class="form-control" [value]="infoPago.categoria" readonly />
+          </div>
+          <div class="form-group form-group-custom">
+            <label>Documento Beneficiario</label>
+            <input type="text" class="form-control" [value]="infoPago.codigoPersonaCargo?.split('|')[1]" readonly/>
+          </div>
+          <div class="form-group form-group-custom">
+            <label>Nombre Beneficiario</label>
+            <input type="text" class="form-control" [value]="infoPago.nombreBeneficiario" readonly/>
+          </div>
+          <div class="form-group form-group-custom">
+            <label>Email</label>
+            <input id="campoEmail" type="email" class="form-control" [value]="infoPago.email" (input)="infoPago.email = $event.target.value"/>
+          </div>
+          <div class="form-group form-group-custom">
+            <label>Valor Copago</label>
+            <input type="text" class="form-control" [value]="infoPago.valorCopago | currency" readonly />
           </div>
           <!-- <div class="form-group">
             <label>Celular</label>
@@ -181,18 +205,10 @@
             <label>Dirección</label>
             <input type="text" class="form-control" [value]="infoPago.direccion" readonly />
           </div> -->
-          <div class="form-group form-group-custom">
-            <label>Email</label>
-            <input type="email" class="form-control" [value]="infoPago.email" (input)="infoPago.email = $event.target.value"/>
-          </div>
-          <div class="form-group form-group-custom">
-            <label>Nombre del Trabajador</label>
-            <input type="text" class="form-control" [value]="infoPago.nombreTrabajador" readonly />
-          </div>
-          <div class="form-group form-group-custom">
-            <label>Valor Copago</label>
-            <input type="text" class="form-control" [value]="infoPago.valorCopago | currency" readonly />
-          </div>
+          
+          
+          
+          
         </form>
       </div>
       <div class="modal-footer">

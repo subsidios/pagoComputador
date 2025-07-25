@@ -17,4 +17,5 @@ export interface InfoPago {
   nroSoli: number;
   urlRetorno?: string;
   estadoBeneficiario: string;
+  nombreBeneficiario: string;
 }
