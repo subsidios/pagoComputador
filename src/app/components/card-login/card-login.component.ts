@@ -427,7 +427,7 @@ export class CardLoginComponent implements OnInit {
     setTimeout(() => {
       this.utilitiesService.loading = true;
       this.utilitiesService.messageTitleModal = 'Información';
-      this.utilitiesService.messageModal = 'Serás redirigido a la pasarela de pagos!'
+      this.utilitiesService.messageModal = 'Serás redirigido a la pasarela de pagos.'
       $(".btn-modal-success-payu-t").click();
     }, 500);
   }
