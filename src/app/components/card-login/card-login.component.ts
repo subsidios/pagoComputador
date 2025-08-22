@@ -89,8 +89,11 @@ export class CardLoginComponent implements OnInit {
               ];
 
               const etiquetas = {
+                documento: "Documento",
+                identificadorProducto: "Identificador del producto:",
                 nombreApellido: "Nombre",
-                paymentOrderId: "Identificador Pago"
+                paymentOrderId: "Identificador de pago",
+                valorPago: "Valor de pago"
               };
               //este funciona
               //this.utilitiesService.messageModal = Object.entries(response)
