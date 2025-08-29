@@ -60,18 +60,88 @@
   </div>
 </div>
 
-<!-- Button modal success -->
+<!-- Button modal exclaim -->
 <button
+  type="button"
+class="btn-modal-success btn btn-primary"
+  data-toggle="modal"
+  data-target="#modal-exclaim-validation"
+>
+  Modal exclaim validation
+</button>
+
+<!-- Modal exclaim -->
+<div
+  class="modal fade modal-exclaim-validation"
+  id="modal-exclaim-validation"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modal-exclaim-validationLabel"
+  aria-hidden="true"
+  data-backdrop="static"
+  data-keyboard="false"
+>
+  <div
+    class="modal-dialog modal-dialog-centered justify-content-center"
+    role="document"
+  >
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="row p-2">
+          <div class="col-md-3 p-0 pl-2">
+            <div
+              class="d-flex justify-content-left align-items-left content-icon"
+            >
+              <img
+                src="assets/img/exclaim.png"
+                alt="icon-otp"
+                class="icon-otp"
+              />
+            </div>
+          </div>
+          <div class="col-md-9 p-0 texto-modal-validacion">
+            <div>
+              <h6 class="m-0 pb-2">
+                {{ utilitiesService.messageTitleModal }}
+              </h6>
+              <div class="m-0">
+                <p class="m-0" [innerHTML]="utilitiesService.messageModal">
+                  <!-- {{ utilitiesService.messageModal }} -->
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-2">
+          <div class="d-flex justify-content-end">
+            <button
+              type="button"
+              class="btn-next btn btn-cerrar-modal-validacion"
+              data-dismiss="modal"
+              aria-label="Close"
+              (click)="redirigirPago()"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button modal success -->
+<!-- <button
   type="button"
   class="btn-modal-success btn btn-primary"
   data-toggle="modal"
   data-target="#modalSuccess"
 >
   Modal success
-</button>
+</button> -->
 
 <!-- Modal success -->
-<div
+<!-- <div
   class="modal fade modal-success"
   id="modalSuccess"
   tabindex="-1"
@@ -131,7 +201,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- Button modal success -->
 <!-- <button type="button" class="btn-modal-success btn btn-primary" data-toggle="modal" data-target="#modalSuccess">
@@ -236,15 +306,83 @@
 <!-- Button modal error -->
 <button
   type="button"
+   class="btn-modal-error btn btn-primary"
+  data-toggle="modal"
+  data-target="#modal-error-validation"
+>
+  Modal error validation
+</button>
+
+<!-- Modal error -->
+<div
+  class="modal fade modal-error-validation"
+  id="modal-error-validation"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modal-error-validationLabel"
+  aria-hidden="true"
+  data-backdrop="static"
+  data-keyboard="false"
+>
+  <div
+    class="modal-dialog modal-dialog-centered justify-content-center"
+    role="document"
+  >
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="row p-2">
+          <div class="col-md-3 p-0 pl-2">
+            <div
+              class="d-flex justify-content-left align-items-left content-icon"
+            >
+              <img
+                src="assets/img/errorV.png"
+                alt="icon-otp"
+                class="icon-otp"
+              />
+            </div>
+          </div>
+          <div class="col-md-9 p-0 texto-modal-validacion">
+            <div>
+              <h6 class="m-0 pb-2">
+                {{ utilitiesService.messageTitleModal }}
+              </h6>
+              <div class="m-0">
+                <p class="m-0">{{ utilitiesService.messageModal }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-2">
+          <div class="d-flex justify-content-end">
+            <button
+              type="button"
+              class="btn-next btn btn-cerrar-modal-validacion"
+              data-dismiss="modal"
+              aria-label="Close"
+              (click)="backLogin(utilitiesService.backLogin)"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button modal error -->
+<!-- <button
+  type="button"
   class="btn-modal-error btn btn-primary"
   data-toggle="modal"
   data-target="#modalError"
 >
   Modal error
-</button>
+</button> -->
 
 <!-- Modal error -->
-<div
+<!-- <div
   class="modal fade modal-error"
   id="modalError"
   tabindex="-1"
@@ -304,7 +442,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- Button modal error -->
 <!-- <button type="button" class="btn-modal-error btn btn-primary" data-toggle="modal" data-target="#modalError">

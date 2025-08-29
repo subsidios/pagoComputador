@@ -4,6 +4,13 @@
   }
 }
 
+.modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #6f7785;
+  /* background: rgba(52, 64, 84, 0.7); */
+}
+
 body {
   font-family: Ubuntu;
   -moz-transition: opacity 0.24s ease-in-out;
@@ -2000,3 +2007,409 @@ div.modal-info-pay-dues div.modal-body table tbody {
 }
 
 /************************************ BODY ************************************/
+/************************************ MODAL EXCLAIM VALIDATION ************************************/
+
+button.btn-modal-exclaim-validation {
+  display: none;
+}
+
+div.modal-exclaim-validation {
+  font-family: Ubuntu, Poppins;
+  font-size: 14px;
+  z-index: 50000000;
+  background: #6f7785;
+}
+
+div.modal-exclaim-validation div.modal-content {
+  border-radius: 12px;
+  width: 550px;
+}
+
+div.modal-exclaim-validation div.modal-body {
+  border-radius: 15%;
+  background-color: #ffffff;
+}
+
+div.modal-exclaim-validation div.modal-body h6 {
+  font-family: Ubuntu;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0%;
+  color: #101828;
+}
+
+div.modal-exclaim-validation div.modal-body p {
+  font-family: Ubuntu;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  color: #475467;
+}
+
+div.modal-exclaim-validation div.modal-body button.btn-next {
+  background-color: #04aeef;
+  border-color: #04aeef;
+  color: #fff;
+  border-radius: 25px;
+  padding: 10px 30px;
+  outline: 0px;
+  font-family: Ubuntu, Poppins;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+div.modal-exclaim-validation div.modal-body button.btn-next:hover {
+  background-color: #fff;
+  border-color: #a8e7ff;
+  color: #a8e7ff;
+}
+
+div.modal-exclaim-validation .content-icon {
+  width: 80px;
+  height: 80px;
+  border: 9px solid #ffecb9;
+  background-color: white;
+  border-radius: 50%;
+  margin-top: -5px;
+  margin-left: 8%;
+}
+
+div.modal-exclaim-validation .content-icon img {
+  width: 38px;
+  height: 40px;
+  position: relative;
+  left: 20%;
+  top: 16%;
+}
+
+/*  */
+
+button.btn-modal-exclaim-validation-facial {
+  display: none;
+}
+
+div.modal-exclaim-validation-facial {
+  font-family: Ubuntu, Poppins;
+  font-size: 14px;
+  z-index: 50000000;
+  background: #6f7785;
+}
+
+div.modal-exclaim-validation-facial div.modal-content {
+  border-radius: 12px;
+  width: 550px;
+}
+
+div.modal-exclaim-validation-facial div.modal-body {
+  border-radius: 15%;
+  background-color: #ffffff;
+}
+
+div.modal-exclaim-validation-facial div.modal-body h6 {
+  font-family: Ubuntu;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0%;
+  color: #101828;
+}
+
+div.modal-exclaim-validation-facial div.modal-body p {
+  font-family: Ubuntu;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  color: #475467;
+}
+
+div.modal-exclaim-validation-facial div.modal-body button.btn-next {
+  background-color: #04aeef;
+  border-color: #04aeef;
+  color: #fff;
+  border-radius: 25px;
+  padding: 10px 30px;
+  outline: 0px;
+  font-family: Ubuntu, Poppins;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+div.modal-exclaim-validation-facial div.modal-body button.btn-next:hover {
+  background-color: #fff;
+  border-color: #a8e7ff;
+  color: #a8e7ff;
+}
+
+div.modal-exclaim-validation-facial .content-icon {
+  width: 80px;
+  height: 80px;
+  border: 9px solid #ffecb9;
+  background-color: white;
+  border-radius: 50%;
+  margin-top: -5px;
+  margin-left: 8%;
+}
+
+div.modal-exclaim-validation-facial .content-icon img {
+  width: 38px;
+  height: 40px;
+  position: relative;
+  left: 20%;
+  top: 16%;
+}
+
+/*  */
+button.btn-modal-exclaim-validation-registro {
+  display: none;
+}
+
+div.modal-exclaim-validation-registro {
+  font-family: Ubuntu, Poppins;
+  font-size: 14px;
+  z-index: 50000000;
+  background: #6f7785;
+}
+
+div.modal-exclaim-validation-registro div.modal-content {
+  border-radius: 12px;
+  width: 550px;
+}
+
+div.modal-exclaim-validation-registro div.modal-body {
+  border-radius: 15%;
+  background-color: #ffffff;
+}
+
+div.modal-exclaim-validation-registro div.modal-body h6 {
+  font-family: Ubuntu;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0%;
+  color: #101828;
+}
+
+div.modal-exclaim-validation-registro div.modal-body p {
+  font-family: Ubuntu;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  color: #475467;
+}
+
+div.modal-exclaim-validation-registro div.modal-body button.btn-next {
+  background-color: #04aeef;
+  border-color: #04aeef;
+  color: #fff;
+  border-radius: 25px;
+  padding: 10px 30px;
+  outline: 0px;
+  font-family: Ubuntu, Poppins;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+div.modal-exclaim-validation-registro div.modal-body button.btn-next:hover {
+  background-color: #fff;
+  border-color: #a8e7ff;
+  color: #a8e7ff;
+}
+
+div.modal-exclaim-validation-registro .content-icon {
+  width: 80px;
+  height: 80px;
+  border: 9px solid #ffecb9;
+  background-color: white;
+  border-radius: 50%;
+  margin-top: -5px;
+  margin-left: 8%;
+}
+
+div.modal-exclaim-validation-registro .content-icon img {
+  width: 38px;
+  height: 40px;
+  position: relative;
+  left: 20%;
+  top: 16%;
+}
+
+/* modal-exclaim-validation-confirmacion-registro */
+button.btn-modal-exclaim-validation-confirmacion-registro {
+  display: none;
+}
+
+div.modal-exclaim-validation-confirmacion-registro {
+  font-family: Ubuntu, Poppins;
+  font-size: 14px;
+  z-index: 50000000;
+  background: #6f7785;
+}
+
+div.modal-exclaim-validation-confirmacion-registro div.modal-content {
+  border-radius: 12px;
+  width: 550px;
+}
+
+div.modal-exclaim-validation-confirmacion-registro div.modal-body {
+  border-radius: 15%;
+  background-color: #ffffff;
+}
+
+div.modal-exclaim-validation-confirmacion-registro div.modal-body h6 {
+  font-family: Ubuntu;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0%;
+  color: #101828;
+}
+
+div.modal-exclaim-validation-confirmacion-registro div.modal-body p {
+  font-family: Ubuntu;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  color: #475467;
+}
+
+div.modal-exclaim-validation-confirmacion-registro
+  div.modal-body
+  button.btn-next {
+  background-color: #04aeef;
+  border-color: #04aeef;
+  color: #fff;
+  border-radius: 25px;
+  padding: 10px 30px;
+  outline: 0px;
+  font-family: Ubuntu, Poppins;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+div.modal-exclaim-validation-confirmacion-registro
+  div.modal-body
+  button.btn-next:hover {
+  background-color: #fff;
+  border-color: #a8e7ff;
+  color: #a8e7ff;
+}
+
+div.modal-exclaim-validation-confirmacion-registro .content-icon {
+  width: 80px;
+  height: 80px;
+  border: 9px solid #ffecb9;
+  background-color: white;
+  border-radius: 50%;
+  margin-top: -5px;
+  margin-left: 8%;
+}
+
+div.modal-exclaim-validation-confirmacion-registro .content-icon img {
+  width: 38px;
+  height: 40px;
+  position: relative;
+  left: 20%;
+  top: 16%;
+}
+
+/************************************ MODAL ERROR VALIDATION ************************************/
+
+button.btn-modal-error-validation {
+  display: none;
+}
+
+div.modal-error-validation {
+  font-family: Ubuntu, Poppins;
+  font-size: 14px;
+  z-index: 50000000;
+  background: #6f7785;
+}
+
+div.modal-error-validation div.modal-content {
+  border-radius: 12px;
+  width: 550px;
+}
+
+div.modal-error-validation div.modal-body {
+  border-radius: 15%;
+  background-color: #ffffff;
+}
+
+div.modal-error-validation div.modal-body h6 {
+  font-family: Ubuntu;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0%;
+  color: #101828;
+}
+
+div.modal-error-validation div.modal-body p {
+  font-family: Ubuntu;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  color: #475467;
+}
+
+div.modal-error-validation div.modal-body button.btn-next {
+  background-color: #04aeef;
+  border-color: #04aeef;
+  color: #fff;
+  border-radius: 25px;
+  padding: 10px 30px;
+  outline: 0px;
+  font-family: Ubuntu, Poppins;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+div.modal-error-validation div.modal-body button.btn-next:hover {
+  background-color: #fff;
+  border-color: #a8e7ff;
+  color: #a8e7ff;
+}
+
+div.modal-error-validation .content-icon {
+  width: 80px;
+  height: 80px;
+  border: 9px solid #ffa8a8;
+  background-color: white;
+  border-radius: 50%;
+  margin-top: -5px;
+  margin-left: 8%;
+}
+
+div.modal-error-validation .content-icon img {
+  width: 38px;
+  height: 40px;
+  position: relative;
+  left: 20%;
+  top: 16%;
+}
+
+.btn-cancelar {
+  background-color: #fff;
+  width: 100%;
+  border: 1px solid #EAECF0;
+  border-radius: 25px;
+  outline: 0px;
+  font-family: Ubuntu;
+  font-weight: 600;
+  font-size: 14px !important;
+  line-height: 24px;
+  letter-spacing: 0%;
+  margin-top: -4px !important;
+}
+
+.btn-cancelar:hover {
+  background-color: rgba(249, 250, 251, 1);
+  color: black;
+
+}

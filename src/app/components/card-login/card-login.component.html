@@ -195,7 +195,7 @@
           </div>
           <div class="form-group form-group-custom">
             <label>Valor Copago</label>
-            <input type="text" class="form-control" [value]="infoPago.valorCopago | currency" readonly />
+            <input type="text" class="form-control" [value]="infoPago.valorCopago.toLocaleString('es-ES')" readonly />
           </div>
           <!-- <div class="form-group">
             <label>Celular</label>
@@ -207,15 +207,22 @@
           </div> -->
           
           
-          
+          <div class="form-group form-group-custom">
+
+<button type="button" class="btn btn-credits btn-block" (click)="redirigirPago()">Pagar</button>
+        
+        </div>
+  
+        <div class="form-group form-group-custom">
+
+<button type="button" class="btn btn-cancelar btn-block" data-dismiss="modal">Cancelar</button>
+        
+        </div>
+      
           
         </form>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-credits btn-signin btn-block mt-1 mb-1" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-credits btn-signin btn-block mt-1 mb-1" (click)="redirigirPago()">Pagar</button>
-        <!-- <button type="button" class="btn btn-primary" (click)="redirigirPago()">Pagar</button> -->
-      </div>
+      
     </div>
   </div>
 </div>

@@ -90,7 +90,7 @@ export class CardLoginComponent implements OnInit {
 
               const etiquetas = {
                 documento: "Documento",
-                identificadorProducto: "Identificador del producto:",
+                identificadorProducto: "Identificador del producto",
                 nombreApellido: "Nombre",
                 paymentOrderId: "Identificador de pago",
                 valorPago: "Valor de pago"
@@ -106,9 +106,22 @@ export class CardLoginComponent implements OnInit {
               //  `</div>`;
 
               //este final
+              // this.utilitiesService.messageModal = camposAMostrar
+              //   .map(key => `${etiquetas[key] || key}: ${response[key] !== undefined ? response[key] : 'N/A'}`)
+              //   .join("\n");
               this.utilitiesService.messageModal = camposAMostrar
-                .map(key => `${etiquetas[key] || key}: ${response[key] !== undefined ? response[key] : 'N/A'}`)
-                .join("\n");
+                .map(key => {
+                  let value = response[key] !== undefined ? response[key] : 'N/A';
+    
+    // Si el campo es 'valorPago', formatearlo con punto de mil
+             if (key === 'valorPago' && value !== 'N/A') {
+                value = value.toLocaleString();  // Agregar punto de mil
+             }
+
+              //return `${etiquetas[key] || key}: ${value}`;
+              return `<strong>${etiquetas[key] || key}:</strong> ${value}`;
+              })
+              .join("\n");
 
 
               // this.utilitiesService.messageModal = `<div style="text-align: left;">` +
@@ -128,7 +141,7 @@ export class CardLoginComponent implements OnInit {
               this.utilitiesService.loading = false;
               $(".btn-modal-success").click();
               // }, 1000);
-            }, 1000);
+            }, 500);
             //  this.utilitiesService.messageTitleModal = "Cambio exitoso";
             //  this.utilitiesService.messageModal =
             //    "Su contraseña ha cambiado con éxito.";
@@ -431,7 +444,7 @@ export class CardLoginComponent implements OnInit {
       this.utilitiesService.loading = true;
       this.utilitiesService.messageTitleModal = 'Información';
       this.utilitiesService.messageModal = 'Serás redirigido a la pasarela de pagos.'
-      $(".btn-modal-success-payu-t").click();
+      $(".btn-modal-success").click();
     }, 500);
   }
 
@@ -457,12 +470,12 @@ export class CardLoginComponent implements OnInit {
         if (response.message === '' && response.paymentOrderStatus === 'RUNNING') {
           //this.utilitiesService.loading = false;
           // this.showModal = true;
-          // $(".btn-modal-success-payu-t").click();
+          // $(".btn-modal-success").click();
           // $(".close").click();
           // setTimeout(() => {
           // this.showModal = false;
           // this.utilitiesService.loading = false;
-          // $(".btn-modal-success-payu-t").click();
+          // $(".btn-modal-success").click();
           // window.location.href = response.paymentUrl;
           // }, 2000);
 
