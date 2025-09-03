@@ -24,8 +24,8 @@ export class AttentionService {
         this.puntosLineasAtencion = response;
         this.lineasAtencion = response.lineasAtencion;
         this.puntosAtencion = response.puntosAtencion;
-        // console.log(this.lineasAtencion);
-        // console.log(this.puntosAtencion);
+         console.log(this.lineasAtencion);
+         console.log(this.puntosAtencion);
       });
   }
 }
