@@ -54,6 +54,8 @@ export class CardLoginComponent implements OnInit {
 
     this.formLoginEmitter.emit(this.formLogin);
     this.activatedRoute.queryParams.subscribe(params => {
+
+
       //const queryParamValue = Object.keys(params)[0]; // Obtiene la clave (7dc7dc58cdcadaeacom en este caso)
       // console.log('Valor obtenido:', queryParamValue);
       const queryParamKey = Object.keys(params)[0]; // Obtiene la clave
@@ -61,6 +63,10 @@ export class CardLoginComponent implements OnInit {
 
       console.log('Clave obtenida:', queryParamKey);
       console.log('Valor obtenido:', queryParamValue);
+
+      if(queryParamValue != null && queryParamValue.toLowerCase().includes("computador")){
+
+      
 
       this.authenticationService
         .verificarTransaccionPayZen(queryParamValue)
@@ -168,7 +174,7 @@ export class CardLoginComponent implements OnInit {
       //if (queryParamValue) {
       //  this.llamarWebService(queryParamValue);
       //}
-    });
+    }else{this.utilitiesService.loading = false;}});
   }
 
   createForm() {
