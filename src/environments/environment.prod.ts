@@ -45,7 +45,7 @@ export const environment = {
     },
   ],
   contacto: "https://confa.co/personas/contacto/",
-  viveConfa: "https://confa.co/personas/servicios-en-linea/",
+  viveConfa: "https://transaccional.confa.co/",
   // Development
   //apiConsultaInfo: "http://localhost:8081/pagoSubsidioEspecieWS/rest/", //ruta de pruebas apuntando a genesys
   apiConsultaInfo: "https://app.confa.co:8381/pagoSubsidioEspecieWS/rest/", //ruta de pruebas apuntando a genesys
