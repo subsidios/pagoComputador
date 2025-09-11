@@ -259,7 +259,11 @@ export class CardLoginComponent implements OnInit {
               
             } else {
               this.utilitiesService.messageTitleModal = "Error consultando la información";
+              if(response.mensaje=="Empresa no esta al día en cartera"){
+                this.utilitiesService.messageModal = "Empresa presenta novedad"
+              }else{
               this.utilitiesService.messageModal = response.mensaje
+              }
               // this.utilitiesService.errorInfoLogin;
 
               this.utilitiesService.backLogin = false;
