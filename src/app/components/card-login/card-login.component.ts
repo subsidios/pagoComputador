@@ -207,6 +207,7 @@ export class CardLoginComponent implements OnInit {
     return this.formLogin.controls;
   }
 
+
   get getDocumentTrabajador() {
     return (
       this.formLogin.get("documentTrabajador").invalid &&
@@ -227,6 +228,15 @@ export class CardLoginComponent implements OnInit {
       this.formLogin.get("radicado").touched
     );
   }
+
+  patchNoSpaces(event: any) {
+  const input = event.target;
+  const valueWithoutSpaces = input.value.replace(/\s+/g, '');
+  
+  // Actualizamos el valor del control en el formulario
+  this.formLogin.get('radicado')?.setValue(valueWithoutSpaces, { emitEvent: false });
+}
+
   onSubmit() {
     this.utilitiesService.urlPago = "";
     this.utilitiesService.messageLoading = "";
