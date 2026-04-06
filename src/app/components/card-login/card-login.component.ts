@@ -229,7 +229,23 @@ export class CardLoginComponent implements OnInit {
     );
   }
 
-  patchNoSpaces(event: any) {
+  patchNoSpaces1(event: any) {
+  const input = event.target;
+  const valueWithoutSpaces = input.value.replace(/\s+/g, '');
+  
+  // Actualizamos el valor del control en el formulario
+  this.formLogin.get('documentTrabajador')?.setValue(valueWithoutSpaces, { emitEvent: false });
+}
+
+patchNoSpaces2(event: any) {
+  const input = event.target;
+  const valueWithoutSpaces = input.value.replace(/\s+/g, '');
+  
+  // Actualizamos el valor del control en el formulario
+  this.formLogin.get('documentPersonaCargo')?.setValue(valueWithoutSpaces, { emitEvent: false });
+}
+
+patchNoSpaces3(event: any) {
   const input = event.target;
   const valueWithoutSpaces = input.value.replace(/\s+/g, '');
   
